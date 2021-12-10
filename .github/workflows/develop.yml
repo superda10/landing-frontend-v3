@@ -1,0 +1,12 @@
+name: develop
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger deployment
+        run: curl -X POST "https://api.vercel.com/v1/integrations/deploy/${{ secrets.SPORES_LANDING_PAGE_DEV_DEPLOY_HOOK_ID }}"
