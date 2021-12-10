@@ -5,10 +5,10 @@ import { News } from 'views/Home/components';
 const Projects = () => {
   return (
     <div className='relative pt-32' style={{ backgroundColor: '#232323', borderRadius: '120px 120px 0 0' }}>
+      <div className='absolute left-0 right-0 -top-16 flex justify-center'>
+        <img src={require('assets/icons/logo-primary-circle.png').default.src} />
+      </div>
       <Container>
-        <div className='absolute left-0 right-0 -top-16 flex justify-center'>
-          <img src={require('assets/icons/logo-primary-circle.png').default.src} />
-        </div>
         <div className='max-w-4xl text-center mx-auto p-16' style={{ backgroundColor: '#2B2B2B', borderRadius: 60 }}>
           <div className='font-bold text-6xl text-primary-main'>Bringing WEB2 creators into the Metaverse</div>
         </div>
@@ -87,11 +87,10 @@ const Projects = () => {
           ].map((item, index) => (
             <Grid item key={index} xl={3}>
               <div
-                className='flex flex-col items-center justify-center'
+                className='flex flex-col items-center justify-center rounded-full'
                 style={{
                   background: `url(${item.image}) no-repeat center center / cover`,
                   height: 92,
-                  borderRadius: 60,
                 }}
               >
                 <div className='font-bold text-xl text-white'>{item.name}</div>
