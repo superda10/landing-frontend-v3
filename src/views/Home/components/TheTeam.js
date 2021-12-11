@@ -1,5 +1,6 @@
 import { Container, Grid, IconButton } from '@mui/material';
 import { ClearAll, LinkedIn, Twitter } from '@mui/icons-material';
+import { Contact } from 'views/Home/components';
 
 const TheTeam = () => {
   return (
@@ -208,6 +209,7 @@ const TheTeam = () => {
           </Grid>
         </Container>
       </div>
+      <Contact />
     </div>
   );
 };
