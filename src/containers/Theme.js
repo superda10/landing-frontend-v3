@@ -10,6 +10,9 @@ export const appTheme = createTheme({
         maxWidthXl: {
           maxWidth: 'calc(1440px + 48px) !important',
         },
+        maxWidthMd: {
+          maxWidth: 'calc(1080px + 48px) !important',
+        },
       },
     },
     MuiButton: {

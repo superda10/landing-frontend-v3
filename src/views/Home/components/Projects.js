@@ -68,7 +68,7 @@ const Projects = () => {
         <div className='flex flex-col items-center mt-32 mb-8'>
           <div className='font-bold text-6xl text-white py-8'>COMING SOON</div>
         </div>
-        <Grid container rowSpacing={6} columnSpacing={3} className='mb-40'>
+        <Grid container columnSpacing={6} rowSpacing={3} className='mb-40'>
           {[
             { name: 'Chain Guardians', image: require('assets/images/projects/Chain_Guardians.png').default.src },
             { name: 'Himo World', image: require('assets/images/projects/Himo_World.png').default.src },

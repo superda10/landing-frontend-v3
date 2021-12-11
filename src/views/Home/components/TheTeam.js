@@ -1,5 +1,5 @@
-import { LinkedIn, Twitter } from '@mui/icons-material';
 import { Container, Grid, IconButton } from '@mui/material';
+import { ClearAll, LinkedIn, Twitter } from '@mui/icons-material';
 
 const TheTeam = () => {
   return (
@@ -111,6 +111,98 @@ const TheTeam = () => {
                     )}
                   </div>
                 </div>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </div>
+      <div className='pb-20'>
+        <Container maxWidth='md'>
+          <div className='flex flex-col items-center mt-32 mb-16'>
+            <h1 className='font-bold text-6xl py-8'>OUR PARTNERS</h1>
+            <img src={require('assets/icons/icon-bumb.png').default.src} />
+          </div>
+          <Grid container columnSpacing={6} rowSpacing={10} className='justify-center'>
+            {[
+              { name: '1_NGC_Venture.svg', width: 280 },
+              { name: '2_Polygon.png', width: 280 },
+              { name: '3_Chain_Guardians.png', width: 200 },
+              { name: '4_Skyvision_Capital.svg', width: 280 },
+              { name: '5_Exnetwork_Capital.png', width: 220 },
+              { name: '6_SL2_Capital.svg', width: 260 },
+              { name: '7_OIG_Group.png', width: 220 },
+              { name: '8_Twin_Apex_Capital.png', width: 280 },
+              { name: '9_Card_Starter.png', width: 260 },
+              { name: '10_Pantera_ICO.png', width: 240 },
+              { name: '11_Token_Suite.png', width: 240 },
+              { name: '12_Lupa_Capital.svg', width: 300 },
+              { name: '13_Maven_Capital.png', width: 280 },
+            ].map((item, index) => (
+              <Grid item key={index} xl={3} className='flex justify-center items-center'>
+                <img
+                  src={require(`assets/images/partners/${item.name}`).default.src}
+                  style={{ width: item.width - 60 }}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+        <Container>
+          <div className='flex flex-col items-center mt-32 mb-16'>
+            <h1 className='font-bold text-6xl py-8'>ROADMAP</h1>
+            <img src={require('assets/icons/icon-bumb.png').default.src} />
+          </div>
+          <Grid container spacing={6}>
+            {[
+              [
+                { timeline: 'Q3 2021', fetures: ['LP Staking', 'Launch NFT marketplace', 'ERC-1155 experiment'] },
+                {
+                  timeline: 'Q4 2021',
+                  fetures: ['Integrating BSC ecosystem', 'Polygon/Matic layer-2 solution', 'Gamestore'],
+                },
+              ],
+              [
+                {
+                  timeline: 'H1 2022',
+                  fetures: [
+                    'Mobile web / Mobile app',
+                    'NFT-DeFi experiments',
+                    'Fiat payment solution',
+                    'Cardano: experiment and testing',
+                  ],
+                },
+                {
+                  timeline: 'H2 2022',
+                  fetures: ['Cardano integration', 'DeFi applications for NFTs', 'NFT evaluation tools intergration'],
+                },
+              ],
+              [
+                { timeline: 'H1 2023', fetures: ['Cross-chain payment solution', 'Expanding to more blockchains'] },
+                {
+                  timeline: 'H2 2023',
+                  fetures: [
+                    'White label solutions',
+                    'SKD for partnership development',
+                    'Integrating NFT cross-chain solutions',
+                  ],
+                },
+              ],
+            ].map((items, index) => (
+              <Grid item key={index} xl={4}>
+                {items.map((item, index) => (
+                  <div key={index}>
+                    <div className='flex items-center'>
+                      <ClearAll fontSize='large' /> <span className='font-bold text-2xl ml-2'>{item.timeline}</span>
+                    </div>
+                    <div className='mt-4 mb-12'>
+                      {item.fetures.map((feature, index) => (
+                        <div key={index} className='text-lg bg-gray-100 rounded mb-4 p-4'>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </Grid>
             ))}
           </Grid>
