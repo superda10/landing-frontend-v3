@@ -15,7 +15,7 @@ const AboutWhitepaper = ({ onClose }) => {
   return (
     <>
       <DialogTitle className='text-center'>
-        <div className='font-black text-2xl md:text-3xl mb-3'>Term and Conditions</div>
+        <div className='font-black text-3xl mb-3'>Term and Conditions</div>
         <div className='text-gray-500'>PLEASE READ THE ENTIRETY OF THIS "NOTICE AND DISCLAIMER" SECTION CAREFULLY.</div>
       </DialogTitle>
 
@@ -251,13 +251,13 @@ const AboutWhitepaper = ({ onClose }) => {
           className='mb-2'
         />
         <div className='space-x-6'>
-          <Button variant='outlined' color='inherit' className='border-gray-500 w-36' onClick={onClose}>
+          <Button variant='outlined' color='inherit' className='border-gray-500 w-32' onClick={onClose}>
             Cancel
           </Button>
           <Button
             variant='contained'
             disabled={!isAgree}
-            className='w-36'
+            className='w-32'
             onClick={() => {
               window.open('https://drive.google.com/file/d/14o134X8zbig-OlCjEupJyWALdHy0BOuJ/view', '_blank');
             }}
