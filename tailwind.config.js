@@ -24,6 +24,10 @@ module.exports = {
           main: '#CFB675',
         },
       },
+      borderRadius: {
+        '60px': '60px',
+        '120px': '120px',
+      },
     },
     flex: {
       1: '1 1 0%',

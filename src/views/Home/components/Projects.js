@@ -4,21 +4,26 @@ import { News } from 'views/Home/components';
 
 const Projects = () => {
   return (
-    <div className='relative pt-32' style={{ backgroundColor: '#232323', borderRadius: '120px 120px 0 0' }}>
-      <div className='absolute left-0 right-0 -top-16 flex justify-center'>
+    <div className='relative pt-20 md:pt-32 rounded-t-60px md:rounded-t-120px' style={{ backgroundColor: '#232323' }}>
+      <div className='absolute left-0 right-0 -top-10 md:-top-16 flex justify-center h-20 md:h-auto'>
         <img src={require('assets/icons/logo-primary-circle.png').default.src} />
       </div>
       <Container>
-        <div className='max-w-4xl text-center mx-auto p-16' style={{ backgroundColor: '#2B2B2B', borderRadius: 60 }}>
-          <div className='font-bold text-6xl text-primary-main'>Bringing WEB2 creators into the Metaverse</div>
+        <div
+          className='max-w-4xl text-center mx-auto p-8 md:p-16 rounded-3xl md:rounded-60px'
+          style={{ backgroundColor: '#2B2B2B' }}
+        >
+          <div className='font-bold text-2xl md:text-4xl lg:text-6xl text-primary-main'>
+            Bringing WEB2 creators into the Metaverse
+          </div>
         </div>
 
-        <div className='flex flex-col items-center mt-32 mb-16'>
-          <h1 className='font-bold text-6xl text-white py-8'>OUR PROJECTS</h1>
+        <div className='flex flex-col items-center my-8 md:mt-32 md:mb-16'>
+          <h1 className='font-black text-center text-4xl md:text-6xl text-white py-4 md:py-8'>OUR PROJECTS</h1>
           <img src={require('assets/icons/icon-bumb.png').default.src} />
         </div>
 
-        <Grid container spacing={6} className='mb-32'>
+        <Grid container spacing={6} className='justify-center mb-32'>
           {[
             {
               name: 'Super BOOMi',
@@ -44,14 +49,10 @@ const Projects = () => {
               image: require('assets/images/projects/Netvrk.png').default.src,
             },
           ].map((item, index) => (
-            <Grid item key={index} xl={3}>
+            <Grid item key={index} sm={8} md={6} lg={3}>
               <div
-                className='flex flex-col items-center justify-between border-2 border-primary-main px-6 py-12'
-                style={{
-                  background: `url(${item.image}) no-repeat center center / cover`,
-                  height: 480,
-                  borderRadius: 60,
-                }}
+                style={{ background: `url(${item.image}) no-repeat center center / cover`, height: 480 }}
+                className='flex flex-col items-center justify-between rounded-60px border-2 border-primary-main px-6 py-12'
               >
                 <div className='text-white text-center'>
                   <div className='font-bold text-3xl mb-8'>{item.name}</div>
@@ -66,7 +67,7 @@ const Projects = () => {
         </Grid>
 
         <div className='flex flex-col items-center mt-32 mb-8'>
-          <div className='font-bold text-6xl text-white py-8'>COMING SOON</div>
+          <div className='font-black text-center text-4xl md:text-6xl text-white py-4 md:py-8'>COMING SOON</div>
         </div>
         <Grid container columnSpacing={6} rowSpacing={3} className='mb-40'>
           {[
@@ -85,13 +86,10 @@ const Projects = () => {
             { name: 'Kow Yokoyama', image: require('assets/images/projects/Kow_Yokoyama.png').default.src },
             { name: 'Tillavision', image: require('assets/images/projects/Tillavision.png').default.src },
           ].map((item, index) => (
-            <Grid item key={index} xl={3}>
+            <Grid item key={index} xs={12} sm={6} lg={3}>
               <div
+                style={{ background: `url(${item.image}) no-repeat center center / cover`, height: 92 }}
                 className='flex flex-col items-center justify-center rounded-full'
-                style={{
-                  background: `url(${item.image}) no-repeat center center / cover`,
-                  height: 92,
-                }}
               >
                 <div className='font-bold text-xl text-white'>{item.name}</div>
               </div>

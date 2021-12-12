@@ -3,7 +3,7 @@ import { Tokenomics } from 'views/Home/components';
 
 const Games = () => {
   return (
-    <div className='pb-20' style={{ backgroundColor: '#232323' }}>
+    <div className='pb-32' style={{ backgroundColor: '#232323' }}>
       <Works />
       <Container>
         {[
@@ -43,20 +43,16 @@ const Games = () => {
           },
         ].map((item, index) => (
           <div key={index}>
-            <div className='flex flex-col items-center mt-32 mb-16'>
-              <h1 className='font-bold text-6xl text-white py-8'>{item.title}</h1>
+            <div className='flex flex-col items-center mt-20 mb-8 md:mt-32 md:mb-16'>
+              <h1 className='font-black text-center text-4xl md:text-6xl text-white py-4 md:py-8'>{item.title}</h1>
               <img src={require('assets/icons/icon-bumb.png').default.src} />
             </div>
-            <div className='max-w-7xl flex justify-between mx-auto mb-32'>
+            <div className='max-w-7xl flex flex-col md:flex-row justify-between mx-auto mb-32'>
               {item.games.map((game, index) => (
-                <div key={index} className='flex-1'>
+                <div key={index} className='flex-1 mx-4'>
                   <div
-                    style={{
-                      background: `url(${game.image}) no-repeat center center / contain`,
-                      width: 600,
-                      height: 360,
-                      margin: 'auto',
-                    }}
+                    style={{ background: `url(${game.image}) no-repeat center center`, maxWidth: 600, height: 360 }}
+                    className='m-auto md:bg-contain'
                   />
                   <div className='px-10 py-6'>
                     <div className='flex items-start mb-1'>
@@ -81,15 +77,15 @@ const Games = () => {
 
 const Works = () => {
   return (
-    <div className='bg-white py-32' style={{ borderRadius: '0 0 120px 120px' }}>
+    <div className='bg-white py-20 md:py-32 rounded-b-60px md:rounded-b-120px'>
       <Container>
-        <div className='flex flex-col items-center mb-16'>
-          <h1 className='font-bold text-6xl py-8'>WHAT SPORES DOES</h1>
+        <div className='flex flex-col items-center mb-8 md:mb-16'>
+          <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>WHAT SPORES DOES</h1>
           <img src={require('assets/icons/icon-bumb.png').default.src} />
         </div>
-        <Grid container spacing={6}>
-          <Grid item xl={3}>
-            <div className='font-bold text-3xl uppercase'>
+        <Grid container spacing={6} className='justify-center'>
+          <Grid item xs={12} lg={3}>
+            <div className='font-bold text-xl md:text-3xl text-center md:text-left uppercase'>
               SPORES NETWORD IS AN ASIAN-INFLUENCED WITH GLOBAL REACT CURATED NFT MARKETPLACE AND GAMEFI PUBLISHER
               HELPING ARTISTS, CREATORS, AND BRANDS ACTIVATE THE METAVERSE (WEB3).
             </div>
@@ -111,15 +107,12 @@ const Works = () => {
               image: require('assets/images/works/gallery_vr.png').default.src,
             },
           ].map((item, index) => (
-            <Grid item key={index} xl={3}>
+            <Grid item key={index} xs={12} sm={8} md={4} lg={3}>
               <div className='flex flex-col space-y-4'>
                 <Button className='h-16'>{item.name}</Button>
                 <div
-                  style={{
-                    background: `url(${item.image}) no-repeat center center / contain`,
-                    height: 240,
-                    marginRight: -4,
-                  }}
+                  style={{ background: `url(${item.image}) no-repeat center center / contain`, height: 240 }}
+                  className='-mr-1'
                 />
                 {item.cards.map((card, index) => (
                   <Button key={index} variant='outlined' className='border-2 text-black h-16'>
@@ -132,7 +125,7 @@ const Works = () => {
         </Grid>
 
         <div className='flex flex-col items-center mt-32 mb-16'>
-          <h1 className='font-bold text-6xl py-8'>CURATED NFT MARKETPLACE</h1>
+          <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>CURATED NFT MARKETPLACE</h1>
           <img src={require('assets/icons/icon-bumb.png').default.src} />
         </div>
         <div className='flex flex-col space-y-12'>
@@ -163,14 +156,10 @@ const Works = () => {
             },
           ].map((item, index) => (
             <div key={index}>
-              <div className='flex'>
+              <div className='flex flex-col lg:flex-row'>
                 <div
-                  style={{
-                    background: `url(${item.image}) no-repeat center center / contain`,
-                    width: 560,
-                    height: 240,
-                  }}
-                  className='flex items-end rounded-3xl font-bold text-2xl text-white pl-10 pb-6 mr-10'
+                  style={{ background: `url(${item.image}) no-repeat center center`, maxWidth: 560, minHeight: 240 }}
+                  className='flex-1 flex items-end rounded-3xl font-bold text-2xl text-white mb-6 md:mr-10 pl-10 pb-6 md:bg-contain'
                 >
                   {item.gallery}
                 </div>
@@ -216,8 +205,8 @@ const Works = () => {
         </div>
 
         <div
-          className='relative font-medium text-3xl text-center mt-40 p-20'
-          style={{ backgroundColor: '#F2F2F2', borderRadius: 60 }}
+          className='relative font-medium text-xl md:text-3xl text-center mt-40 py-20 px-6 md:px-20 rounded-3xl md:rounded-60px'
+          style={{ backgroundColor: '#F2F2F2' }}
         >
           <div className='absolute left-0 right-0 -top-20 flex justify-center'>
             <img src={require('assets/icons/logo-primary-star.png').default.src} className='h-40' />
