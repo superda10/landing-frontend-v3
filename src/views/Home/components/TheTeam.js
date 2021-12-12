@@ -159,7 +159,7 @@ const TheTeam = () => {
             <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>ROADMAP</h1>
             <img src={require('assets/icons/icon-bumb.png').default.src} />
           </div>
-          <Grid container colSpacing={6} className='justify-center'>
+          <Grid container columnSpacing={6} className='justify-center'>
             {[
               [
                 { timeline: 'Q3 2021', fetures: ['LP Staking', 'Launch NFT marketplace', 'ERC-1155 experiment'] },
