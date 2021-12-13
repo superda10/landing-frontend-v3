@@ -38,7 +38,7 @@ const Projects = () => {
             {
               name: 'American McGee',
               description: `American McGee is an influential figure best known as the designer of his signature game American McGee’s Alice and its sequence Alice: Madness Returns.\n\nPlushie Dreadfuls is a line of broken, stitched, weird, and scary plush toys from the mind of American McGee.`,
-              url: 'https://american.spores.app',
+              url: 'https://americanmcgee.spores.app',
               image: require('assets/images/projects/American_McGee.png').default.src,
             },
             {
@@ -62,7 +62,7 @@ const Projects = () => {
                   <div className='font-bold text-3xl mb-8'>{item.name}</div>
                   <div className='text-sm whitespace-pre-line'>{item.description}</div>
                 </div>
-                <ColorButton component={Link} background='#FFF' href={item.url}>
+                <ColorButton component={Link} background='#FFF' href={item.url} target='_blank'>
                   Learn more
                 </ColorButton>
               </div>

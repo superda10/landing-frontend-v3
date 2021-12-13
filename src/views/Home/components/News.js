@@ -69,7 +69,7 @@ const News = () => {
                     </Link>
                     <div className='text-sm max-line-8 mt-2'>{item.description}</div>
                   </div>
-                  <ColorButton component={Link} href={item.url}>
+                  <ColorButton component={Link} href={item.url} target='_blank'>
                     Learn more
                   </ColorButton>
                 </div>

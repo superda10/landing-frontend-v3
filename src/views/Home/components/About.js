@@ -46,6 +46,7 @@ const About = () => {
             background='#EBECF0'
             className='text-gray-700'
             href='https://staking.spores.app'
+            target='_blank'
           >
             Stake & Earn
           </ColorButton>
@@ -68,6 +69,7 @@ const About = () => {
                 size='large'
                 component={Link}
                 href='https://etherscan.io/address/0xcbE771323587EA16dACB6016e269D7F08A7ACC4E'
+                target='_blank'
               >
                 SPO Contract Address
               </ColorButton>

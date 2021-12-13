@@ -71,7 +71,7 @@ const AppMenu = () => {
                   </div>
                 </Link>
               ))}
-              <ColorButton component={Link} href='https://staking.spores.app'>
+              <ColorButton component={Link} href='https://staking.spores.app' target='_blank'>
                 Stake & Earn
               </ColorButton>
             </div>
