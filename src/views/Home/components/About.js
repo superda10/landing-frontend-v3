@@ -54,7 +54,7 @@ const About = () => {
 
         <div className='flex flex-col-reverse lg:flex-row items-start my-10'>
           <div className='flex-1 lg:mr-20'>
-            <div className='font-medium text-sm md:text-xl lg:text-2xl whitespace-pre-line text-center md:text-justify'>
+            <div className='font-medium lg:font-bold text-sm md:text-xl lg:text-2xl whitespace-pre-line text-center md:text-justify'>
               {`Spores Network is an NFT Ecosystem that is powered through a curated marketplace - Art, Gaming, and Entertainment - that is combined with a GameFi launchpad and enhanced through a proprietary games publishing platform activating IDO, IGO, and INO opportunities.\n\nSpores enables artists, content creators, and brands to activate the Metaverse (Web3) by bridging digital and physical experiences.\n\nEverything we do is from the lens of being Asian influenced with Global Reach.`}
             </div>
             <div className='flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-6 mt-8'>
