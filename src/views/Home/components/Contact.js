@@ -2,7 +2,7 @@ import { Avatar, Button, Container, Link } from '@mui/material';
 
 const About = () => {
   return (
-    <div className='py-20 rounded-t-60px md:rounded-t-120px' style={{ backgroundColor: '#232323' }}>
+    <div id='contact' className='py-20 rounded-t-60px md:rounded-t-120px' style={{ backgroundColor: '#232323' }}>
       <Container>
         <div className='flex flex-col items-center'>
           <h1 className='font-black text-center text-white text-4xl md:text-6xl py-4 md:py-8'>CONTACT US</h1>

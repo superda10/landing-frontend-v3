@@ -2,7 +2,7 @@ import { Container } from '@mui/material';
 
 const Tokenomics = () => {
   return (
-    <Container className='bg-white py-20 px-6 md:px-20 rounded-60px'>
+    <Container id='tokenomics' className='bg-white py-20 md:pt-32 px-6 md:px-20 rounded-60px'>
       <div className='flex flex-col items-center mb-16'>
         <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>TOKENOMICS</h1>
         <img src={require('assets/icons/icon-bumb.png').default.src} />

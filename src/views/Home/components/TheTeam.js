@@ -4,7 +4,7 @@ import { Contact } from 'views/Home/components';
 
 const TheTeam = () => {
   return (
-    <div>
+    <div id='team'>
       <div className='py-20 md:py-32' style={{ background: '#F0F0F0' }}>
         <Container>
           <div className='flex flex-col items-center mb-8 md:mb-16'>

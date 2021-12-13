@@ -5,7 +5,8 @@ import { News } from 'views/Home/components';
 const Projects = () => {
   return (
     <div
-      className='relative pt-20 md:pt-32 rounded-t-60px md:rounded-t-120px overflow-hidden'
+      id='projects'
+      className='relative pt-20 md:pt-32 rounded-t-60px md:rounded-t-120px'
       style={{ backgroundColor: '#232323' }}
     >
       <div className='absolute left-0 right-0 -top-10 md:-top-16 flex justify-center h-20 md:h-auto'>

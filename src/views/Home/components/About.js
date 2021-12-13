@@ -4,34 +4,36 @@ import { Button, Container, Dialog, Link } from '@mui/material';
 import { ColorButton } from 'components';
 import AboutWhitepaper from './AboutWhitepaper';
 
+export const exchangers = [
+  {
+    name: 'Uniswap',
+    icon: require('assets/icons/logo-uniswap.png').default.src,
+    url: 'https://app.uniswap.org/#/swap?outputCurrency=0xcbE771323587EA16dACB6016e269D7F08A7ACC4E',
+  },
+  {
+    name: 'Gate.io',
+    icon: require('assets/icons/logo-gateio.png').default.src,
+    url: 'https://www.gate.io/trade/SPO_USDT',
+  },
+  {
+    name: 'PancakeSwap',
+    icon: require('assets/icons/logo-pancakeswap.png').default.src,
+    url: 'https://pancakeswap.finance/swap?outputCurrency=0x8357c604c5533fa0053BeAaA1494Da552ceA38f7',
+  },
+];
+
 const About = () => {
   const [isOpenWhitepaper, setIsOpenWhitepaper] = React.useState(false);
 
   return (
-    <div className='pb-20'>
+    <div id='about' className='pb-20'>
       <Container>
         <div className='hidden md:flex justify-end items-center font-medium text-gray-700 py-6'>
           <div className='text-gray-700'>
             <span>Get SPO</span>
             <Remove className='text-base mx-2' />
           </div>
-          {[
-            {
-              name: 'Uniswap',
-              icon: require('assets/icons/logo-uniswap.png').default.src,
-              url: 'https://app.uniswap.org/#/swap?outputCurrency=0xcbE771323587EA16dACB6016e269D7F08A7ACC4E',
-            },
-            {
-              name: 'Gate.io',
-              icon: require('assets/icons/logo-gateio.png').default.src,
-              url: 'https://www.gate.io/trade/SPO_USDT',
-            },
-            {
-              name: 'PancakeSwap',
-              icon: require('assets/icons/logo-pancakeswap.png').default.src,
-              url: 'https://pancakeswap.finance/swap?outputCurrency=0x8357c604c5533fa0053BeAaA1494Da552ceA38f7',
-            },
-          ].map((item, index) => (
+          {exchangers.map((item, index) => (
             <Link key={index} href={item.url} className='text-gray-700 hover:text-primary-main mr-4'>
               <div className='flex items-center'>
                 <img src={item.icon} className='mr-1.5' />

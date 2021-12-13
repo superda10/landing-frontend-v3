@@ -5,7 +5,11 @@ import { ColorButton } from 'components';
 const News = () => {
   return (
     <Container>
-      <div className='relative py-20 md:py-32 px-4 md:px-16 rounded-t-60px' style={{ backgroundColor: '#2B2B2B' }}>
+      <div
+        id='news'
+        className='relative py-20 md:py-32 px-4 md:px-16 rounded-t-60px'
+        style={{ backgroundColor: '#2B2B2B' }}
+      >
         <img
           src={require('assets/icons/icon-hand.png').default.src}
           className='absolute left-0 top-0'
@@ -13,7 +17,7 @@ const News = () => {
         />
         <img
           src={require('assets/icons/logo-primary-star-alt.png').default.src}
-          className='absolute right-0 top-0'
+          className='hidden xl:block absolute right-0 top-0'
           style={{ transform: 'translateX(50%) translateY(-50%)' }}
         />
 

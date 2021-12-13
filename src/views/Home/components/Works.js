@@ -77,7 +77,7 @@ const Games = () => {
 
 const Works = () => {
   return (
-    <div className='bg-white py-20 md:py-32 rounded-b-60px md:rounded-b-120px'>
+    <div id='works' className='bg-white py-20 md:py-32 rounded-b-60px md:rounded-b-120px'>
       <Container>
         <div className='flex flex-col items-center mb-8 md:mb-16'>
           <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>WHAT SPORES DOES</h1>

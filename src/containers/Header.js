@@ -5,10 +5,10 @@ import { NextLink, publicRoute } from 'routes';
 const Header = () => {
   return (
     <AppBar color='inherit' position='sticky' elevation={1}>
-      <Toolbar component={Container} className='h-20'>
+      <Toolbar component={Container} className='md:h-20'>
         <NextLink href={publicRoute.home.path}>
           <a className='flex items-center'>
-            <img src='/assets/logos/logo_primary.svg' />
+            <img src='/assets/logos/logo_primary.svg' className='h-10 md:h-auto' />
           </a>
         </NextLink>
         <div className='flex-1' />
