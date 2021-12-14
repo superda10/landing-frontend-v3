@@ -17,7 +17,7 @@ const News = () => {
         />
         <img
           src={require('assets/icons/logo-primary-star-alt.png').default.src}
-          className='hidden xl:block absolute right-0 top-0'
+          className='absolute right-0 top-0'
           style={{ transform: 'translateX(50%) translateY(-50%)' }}
         />
 

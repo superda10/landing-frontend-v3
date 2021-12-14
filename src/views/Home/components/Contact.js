@@ -28,7 +28,12 @@ const About = () => {
           ))}
         </Container>
         <div className='flex justify-center my-10'>
-          <Button variant='outlined' className='font-bold text-2xl border-2 rounded-full h-20'>
+          <Button
+            variant='outlined'
+            component={Link}
+            href='https://spores.xperx.ai/mailing-list'
+            className='font-bold text-2xl border-2 rounded-full h-20'
+          >
             JOIN OUR MAILING LIST
           </Button>
         </div>

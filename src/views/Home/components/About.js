@@ -84,7 +84,7 @@ const About = () => {
           <img src={require('assets/icons/icon-bumb.png').default.src} />
           <div className='flex flex-wrap justify-center my-8'>
             {[
-              { name: 'Spores Marketplace', url: 'https://spores.app/explore' },
+              { name: 'Spores Marketplace', url: 'https://marketplace.spores.app' },
               { name: 'Spores Launchpad', url: 'https://launchpad.spores.app' },
               { name: 'VR Gallery – République' },
             ].map((item, index) => (
