@@ -85,9 +85,9 @@ const Works = () => {
         </div>
         <Grid container spacing={6} className='justify-center'>
           <Grid item xs={12} lg={3}>
-            <div className='font-bold text-xl md:text-3xl text-center md:text-left uppercase'>
-              SPORES NETWORD IS AN ASIAN-INFLUENCED WITH GLOBAL REACT CURATED NFT MARKETPLACE AND GAMEFI PUBLISHER
-              HELPING ARTISTS, CREATORS, AND BRANDS ACTIVATE THE METAVERSE (WEB3).
+            <div className='font-bold text-xl md:text-3xl text-center md:text-left'>
+              Spores Network is an Asian-influenced with global reach curated NFT Marketplace and GameFi Publisher
+              helping artists, creators, and brands activate the Metaverse (Web3).
             </div>
           </Grid>
           {[
@@ -102,8 +102,8 @@ const Works = () => {
               image: require('assets/images/works/gallery_gamefi.png').default.src,
             },
             {
-              name: 'VR GALLERY - RÉPUBLIQUE',
-              cards: ['VR GALLERY - RÉPUBLIQUE', 'METAVERSE (WEB3)'],
+              name: 'RÉPUBLIQUE',
+              cards: ['RÉPUBLIQUE', 'METAVERSE (WEB3)'],
               image: require('assets/images/works/gallery_vr.png').default.src,
             },
           ].map((item, index) => (
