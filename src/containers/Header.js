@@ -1,11 +1,11 @@
 import { AppMenu } from 'containers';
-import { AppBar, Container, Toolbar } from '@mui/material';
+import { AppBar, Toolbar } from '@mui/material';
 import { NextLink, publicRoute } from 'routes';
 
 const Header = () => {
   return (
     <AppBar color='inherit' position='sticky' elevation={1}>
-      <Toolbar component={Container} className='md:h-20'>
+      <Toolbar className='md:h-20 px-10'>
         <NextLink href={publicRoute.home.path}>
           <a className='flex items-center'>
             <img src='/assets/logos/logo_primary.svg' className='h-10 md:h-auto' />

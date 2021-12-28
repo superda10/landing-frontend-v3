@@ -1,6 +1,10 @@
+import { useState } from 'react'
 import { Avatar, Button, Container, Link } from '@mui/material';
+import SupportForm from './SupportForm';
 
 const About = () => {
+  const [type, setType] = useState('')
+  const [showRequestSupport, setShowRequestSupport] = useState(false)
   return (
     <div id='contact' className='py-20 rounded-t-60px md:rounded-t-120px' style={{ backgroundColor: '#232323' }}>
       <Container>
@@ -14,14 +18,21 @@ const About = () => {
         <Container maxWidth='md' className='flex flex-col md:flex-row items-center justify-center'>
           {[
             { name: 'Apply to be a Creator', url: 'https://spores.xperx.ai/artist-apply' },
-            { name: 'Partnership Proposal', url: 'mailto:marketing@spores.app' },
-            { name: 'Customer Support', url: 'mailto:customersupport@spores.app' },
+            { name: 'Partnership Proposal', onClick: () => {
+              setType('PARTNERSHIP')
+              setShowRequestSupport(true)
+            } },
+            { name: 'Customer Support', onClick: () => {
+              setType('CUSTOMER_SUPPORT')
+              setShowRequestSupport(true)
+            } },
           ].map((item, index) => (
             <Button
               key={index}
               component={Link}
               href={item.url}
               className='text-xl text-center text-white rounded-full w-60 h-20 mx-4 my-2'
+              onClick={item.onClick}
             >
               {item.name}
             </Button>
@@ -81,6 +92,11 @@ const About = () => {
           ))}
         </div>
       </Container>
+
+      <SupportForm show={showRequestSupport}
+        handleClose={() => setShowRequestSupport(false)}
+        type={type}
+      />
     </div>
   );
 };

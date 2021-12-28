@@ -29,7 +29,7 @@ const AppMenu = () => {
           <a
             key={index}
             onClick={() => scrollTo(item.target)}
-            className='font-medium text-sm text-center cursor-pointer text-gray-700 hover:text-black mx-2'
+            className='font-semibold text-sm text-center cursor-pointer text-black hover:text-black mx-4'
           >
             {item.name}
           </a>

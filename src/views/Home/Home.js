@@ -1,4 +1,5 @@
 import { About, Projects, Works, TheTeam } from './components';
+import { ToastContainer } from "react-toastify"
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <Projects />
       <Works />
       <TheTeam />
+      <ToastContainer />
     </div>
   );
 };

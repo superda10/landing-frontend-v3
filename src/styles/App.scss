@@ -12,3 +12,12 @@ body {
 a {
   text-decoration: none !important;
 }
+
+.modal-backdrop.show, .modal {
+  z-index: 999999 !important;
+}
+
+.modal-content {
+  border-radius: 20px;
+}
+

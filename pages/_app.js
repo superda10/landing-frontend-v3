@@ -4,6 +4,10 @@ import { CacheProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 import { AppTheme } from 'containers';
 import createCache from '@emotion/cache';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import 'react-toastify/dist/ReactToastify.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'tailwindcss/tailwind.css';
 import 'styles/App.scss';
 
