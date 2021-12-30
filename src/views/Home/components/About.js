@@ -105,7 +105,7 @@ const About = () => {
             {[
               { name: 'Spores Marketplace', url: 'https://marketplace.spores.app' },
               { name: 'Spores Launchpad', url: 'https://launchpad.spores.app' },
-              { name: 'République' },
+              { name: 'République', url: 'https://republique.spores.app/' },
             ].map((item, index) => (
               <Link key={index} href={item.url}>
                 <Button
