@@ -16,7 +16,7 @@ const Projects = () => {
           url: '/our-projects/public/list'
         })
 
-        setProjects(result.data)
+        setProjects([...result.data, ...result.data, ...result.data])
       } catch(e) {
         console.log(e)
       }

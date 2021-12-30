@@ -3,6 +3,7 @@ import { Container, Grid, Link } from '@mui/material';
 import { ColorButton } from 'components';
 import { useState, useEffect } from 'react'
 import * as Api from 'api/api'
+import SliderComponent from './SliderComponent';
 
 const News = () => {
   const [pressReleaseNews, setPressReleaseNews] = useState([])
@@ -62,9 +63,12 @@ const News = () => {
 
         <div className='bg-primary-main w-full h-0.5 my-6' />
         <div className='font-medium text-2xl text-primary-main mb-6'>PRESS RELEASES</div>
-        <Grid container spacing={3} className='mb-24'>
+        <SliderComponent data={pressReleaseNews}
+          slidesToScroll={4}
+          slidesToShow={4}
+        >
           {pressReleaseNews.map((item, index) => (
-            <Grid item key={index} md={6} lg={3}>
+            <div item key={index} className={'px-3 max-w-sm'}>
               <div className='bg-white rounded-lg pt-2'>
                 <div style={{ background: `url(${item.image}) no-repeat center center / cover` }} className='h-40' />
                 <div className='flex flex-col items-start justify-between h-80 p-4'>
@@ -83,15 +87,18 @@ const News = () => {
                   </ColorButton>
                 </div>
               </div>
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </SliderComponent>
 
         <div className='bg-primary-main w-full h-0.5 my-6' />
         <div className='font-medium text-2xl text-primary-main mb-6'>SOCIALS</div>
-        <Grid container spacing={3}>
+        <SliderComponent data={socialNews}
+          slidesToScroll={4}
+          slidesToShow={4}
+        >
           {socialNews.map((item, index) => (
-            <Grid item key={index} md={6} lg={3}>
+            <div item key={index} className={'px-3 max-w-sm'}>
               <div className='bg-white rounded-lg pb-4'>
                 <div className='flex flex-col items-start justify-between h-52 p-4'>
                   <div className='mb-4'>
@@ -107,9 +114,10 @@ const News = () => {
                 </div>
                 <div style={{ background: `url(${item.image}) no-repeat center center / cover` }} className='h-40' />
               </div>
-            </Grid>
+            </div>
           ))}
-        </Grid>
+        </SliderComponent>
+        
       </div>
     </Container>
   );
