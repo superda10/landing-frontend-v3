@@ -1,0 +1,50 @@
+.container {
+  :global {
+    @media (max-width: 767px) {
+      .slick-prev {
+        left: -4px;
+        z-index: 999999;
+      }
+      .slick-next {
+        right: -4px;
+        z-index: 999999;
+      }
+    }
+  }
+}
+
+.arrow {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  &:hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+  .arrowIcon {
+    width: 10px;
+  }
+}
+
+.nextArrow {
+  right: -35px;
+  img {
+    transform: rotate(180deg);
+  }
+  @media (max-width: 767px) {
+    right: -13px;
+  }
+}
+
+.prevArrow {
+  left: -35px;
+  @media (max-width: 767px) {
+    left: -13px;
+  }
+}
