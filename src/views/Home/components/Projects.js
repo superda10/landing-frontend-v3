@@ -4,6 +4,8 @@ import { News } from 'views/Home/components';
 import { useState, useEffect } from 'react'
 import * as Api from 'api/api'
 import SliderComponent from './SliderComponent';
+import classNames from 'classnames'
+import classes from './Projects.module.scss'
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
@@ -75,13 +77,13 @@ const Projects = () => {
               <div item key={index} className={'px-3 max-w-sm'}>
                 <div
                   style={{ background: `url(${item.image}) no-repeat center center / cover`, height: 480 }}
-                  className='flex flex-col items-center justify-between rounded-60px border-2 border-primary-main px-6 py-12'
+                  className={classNames('flex flex-col items-center justify-between rounded-60px border-2 border-primary-main px-6 py-12', classes.imageWrapper)}
                 >
-                  <div className='text-white text-center'>
+                  <div className='text-white text-center relative z-10'>
                     <div className='font-bold text-3xl mb-8'>{item.title}</div>
                     <div className='text-sm whitespace-pre-line'>{item.description}</div>
                   </div>
-                  <ColorButton component={Link} background='#FFF' href={item.link} target='_blank'>
+                  <ColorButton component={Link} background='#FFF' href={item.link} target='_blank' className='relative z-10'>
                     Learn more
                   </ColorButton>
                 </div>
@@ -98,9 +100,9 @@ const Projects = () => {
               <Grid item key={index} xs={12} sm={6} lg={3}>
                 <div
                   style={{ background: `url(${item.image}) no-repeat center center / cover`, height: 92 }}
-                  className='flex flex-col items-center justify-center rounded-full'
+                  className={classNames('flex flex-col items-center justify-center rounded-full', classes.imageWrapper)}
                 >
-                  <div className='font-bold text-xl text-white'>{item.title}</div>
+                  <div className='font-bold text-xl text-white z-10 relative'>{item.title}</div>
                 </div>
               </Grid>
             ))}
