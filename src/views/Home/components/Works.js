@@ -1,4 +1,5 @@
 import { Button, Container, Grid } from '@mui/material';
+import classNames from 'classnames';
 import { Tokenomics } from 'views/Home/components';
 
 const Games = () => {
@@ -156,25 +157,16 @@ const Works = () => {
             },
           ].map((item, index) => (
             <div key={index}>
-              <div className='flex flex-col lg:flex-row'>
+              <div className='flex flex-col lg:flex-row items-center'>
                 <div
                   style={{ background: `url(${item.image}) no-repeat center center`, maxWidth: 560, minHeight: 240 }}
                   className='flex-1 flex items-end rounded-3xl font-bold text-2xl text-white mb-6 md:mr-10 pl-10 pb-6 md:bg-contain'
                 >
                   {item.gallery}
                 </div>
-
-                <div className='flex-1 flex flex-col-reverse justify-center'>
-                  <div>
-                    <div className='flex items-start mb-1'>
-                      <img src={require('assets/icons/logo-primary-star.png').default.src} className='w-10 mr-2' />
-                      <div className='font-bold text-2xl py-1'>{item.title}</div>
-                    </div>
-                    <div className='text-lg'>{item.description}</div>
-                  </div>
-
+                <div className='flex-1 flex items-start flex-col lg:flex-row'>
                   {index === 0 && (
-                    <div className='mb-6'>
+                    <div className='mb-6 lg:mr-6 w-full lg:w-3/5'>
                       <div className='flex items-start mb-1'>
                         <img src={require('assets/icons/logo-primary-star.png').default.src} className='w-10 mr-2' />
                         <div className='font-bold text-2xl py-1'>
@@ -198,6 +190,14 @@ const Works = () => {
                       </div>
                     </div>
                   )}
+
+                  <div className={classNames(index === 0 ? 'lg:w-2/5' : 'lg:w-3/5', 'item-start w-full')}>
+                    <div className={classNames('flex items-start mb-1')}>
+                      <img src={require('assets/icons/logo-primary-star.png').default.src} className='w-10 mr-2' />
+                      <div className='font-bold text-2xl py-1'>{item.title}</div>
+                    </div>
+                    <div className='text-lg'>{item.description}</div>
+                  </div>
                 </div>
               </div>
             </div>

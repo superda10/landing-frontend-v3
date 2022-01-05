@@ -1,3 +1,54 @@
 .img {
   width: 100%;
+  height: 660px;
+  object-fit: cover;
+  @media (min-width: 1920px) {
+    width: 100%;
+    height: auto;
+  }
+}
+.imageWrapper {
+  width: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  &:hover {
+    background-color: #efefef;
+  }
+  .arrowIcon {
+    width: 8px;
+  }
+}
+
+.nextArrow {
+  right: 24px;
+  img {
+    transform: rotate(180deg);
+  }
+  @media (max-width: 767px) {
+    right: 10px;
+  }
+}
+
+.prevArrow {
+  left: 24px;
+  @media (max-width: 767px) {
+    left: 10px;
+  }
 }

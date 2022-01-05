@@ -48,7 +48,7 @@ const News = () => {
         <img
           src={require('assets/icons/icon-hand.png').default.src}
           className='absolute left-0 top-0'
-          style={{ transform: 'translateX(-30%) translateY(-50%)' }}
+          style={{ transform: 'translateX(-13%) translateY(-61%)', width: 431 }}
         />
         <img
           src={require('assets/icons/logo-primary-star-alt.png').default.src}
