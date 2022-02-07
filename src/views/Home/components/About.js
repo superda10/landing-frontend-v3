@@ -106,6 +106,7 @@ const About = () => {
               { name: 'Spores Marketplace', url: 'https://marketplace.spores.app' },
               { name: 'Spores Launchpad', url: 'https://launchpad.spores.app' },
               { name: 'République', url: 'https://republique.spores.app/' },
+              { name: 'Game Store', url: 'https://games.spores.app/' },
             ].map((item, index) => (
               <Link key={index} href={item.url}>
                 <Button
