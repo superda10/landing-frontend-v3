@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import * as Api from 'api/api'
 import Slider from "react-slick";
 import classNames from 'classnames'
 import classes from './Banners.module.scss'
+import { getMobileOperatingSystem } from 'utils/utils';
 
 export function SampleNextArrow(props) {
   const { onClick, currentSlide, slideCount } = props;
@@ -42,7 +43,9 @@ const settings = {
 
 const Banners = () => {
   const [banners, setBanners] = useState([])
+  const [ isMobile, setIsMobile ] = useState(false)
   useEffect(() => {
+    setIsMobile(getMobileOperatingSystem() !== 'unknown')
     const getBanners = async () => {
       try {
         const result = await Api.get({
@@ -72,7 +75,7 @@ const Banners = () => {
                 backgroundImage: `url("${banner.image}")`
               }}
               className={classes.imageWrapper}/> */}
-              <img src={banner.image} className={classes.img} alt='img'/>
+              <img src={isMobile ? banner.imageMobile : banner.image} className={classes.img} alt='img'/>
             </a>
           )) }
         </Slider>

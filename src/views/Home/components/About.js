@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div id='about' className='pb-20'>
       <div className='flex items-center justify-between px-10'>
-        <div className='flex items-center space-x-4'>
+        <div className='hidden md:flex items-center space-x-4'>
           <ColorButton background='#232323' onClick={() => setIsOpenWhitepaper(true)}>
             Whitepaper
           </ColorButton>
