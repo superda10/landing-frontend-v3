@@ -10,7 +10,7 @@ export function SampleNextArrow(props) {
       onClick={onClick}
       className={classNames(classes.arrow, classes.nextArrow, currentSlide + 4 === slideCount && classes.disabled)}
     >
-      <img src={'/assets/images/prev.svg'} className={classes.arrowIcon} alt="arrow" />
+      <img src={'/assets/images/prev-black.svg'} className={classes.arrowIcon} alt="arrow" />
     </div>
   );
 }
@@ -22,7 +22,7 @@ export function SamplePrevArrow(props) {
       onClick={onClick}
       className={classNames(classes.arrow, classes.prevArrow, currentSlide === 0 && classes.disabled)}
     >
-      <img src={'/assets/images/prev.svg'} className={classes.arrowIcon} alt="arrow" />
+      <img src={'/assets/images/prev-black.svg'} className={classes.arrowIcon} alt="arrow" />
     </div>
   );
 }

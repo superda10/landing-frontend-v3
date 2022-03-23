@@ -18,7 +18,7 @@ const ColorButton = ({ background = '#CFB675', color, ...props }) => {
           disableElevation: true,
         },
         styleOverrides: {
-          root: { textTransform: 'none', borderRadius: 9999, color },
+          root: { textTransform: 'none', borderRadius: 9999, color: `${color} !important` },
           sizeLarge: { minHeight: 56, minWidth: 56, fontSize: 20 },
           sizeMedium: { minHeight: 40, minWidth: 40, fontSize: 16 },
           sizeSmall: { minHeight: 32, minWidth: 32, fontSize: 14 },

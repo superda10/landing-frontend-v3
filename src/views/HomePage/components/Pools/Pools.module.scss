@@ -1,0 +1,19 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  .tabs {
+    margin-bottom: 36px;
+  }
+  .pool { 
+    padding: 0 15px;
+    max-width: 400px;
+  }
+
+  @media (max-width: 767px) {
+    .pool {
+      max-width: 100%;
+    }
+  }
+}

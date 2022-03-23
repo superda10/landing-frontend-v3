@@ -29,10 +29,20 @@
       height: 18px;
     }
   }
+
+  @media (max-width: 767px) {
+    padding: 20px 20px 10px 20px;
+    .btnClose {
+      top: 12px;
+    }
+  }
 }
 
 .content {
   padding: 20px 55px;
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
 }
 
 .actions {

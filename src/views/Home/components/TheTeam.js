@@ -1,20 +1,19 @@
-import { Container, Link, Grid, IconButton } from '@mui/material';
-import { ClearAll, LinkedIn, Twitter } from '@mui/icons-material';
-import { Contact } from 'views/Home/components';
+import { useState } from 'react'
+import { Link, Grid, IconButton } from '@mui/material';
+import { LinkedIn, Twitter } from '@mui/icons-material';
+import classNames from 'classnames'
 
 const TheTeam = () => {
+  const [showAllCXOTeamInfo, setShowAllCXOTeamInfo] = useState(false)
+  const [showAllAdviorTeamInfo, setShowAllAdvisorTeamInfo] = useState(false)
+
   return (
     <div id='team'>
-      <div className='py-20 md:py-32' style={{ background: '#F0F0F0' }}>
-        <Container>
-          <div className='flex flex-col items-center mb-8 md:mb-16'>
-            <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>OUR FOUNDATION TEAM</h1>
-            <img src={require('assets/icons/icon-bumb.png').default.src} />
-          </div>
+          <h1 className='title text-center mb-40'>Our Foundation Team</h1>
           <Grid
             container
-            spacing={{ xs: 3, xl: 6 }}
-            columns={{ xs: 12, sm: 12, md: 12, xl: 10 }}
+            spacing={{ xs: 3, xl: 3 }}
+            columns={{ xs: 12, sm: 12, md: 12, xl: 12 }}
             className='justify-center'
           >
             {[
@@ -43,92 +42,166 @@ const TheTeam = () => {
                 LinkedIn: 'https://www.linkedin.com/in/paven-do',
               },
             ].map((item, index) => (
-              <Grid item key={index} xs={12} sm={8} md={4} xl={3}>
-                <div className='flex flex-col justify-between items-center bg-primary-main rounded-3xl h-full p-6'>
-                  <img src={item.image} />
-                  <div className='font-bold text-lg mt-3'>{item.name}</div>
-                  <div className='font-medium mb-3'>{item.position}</div>
-                  <div className='text-sm text-center whitespace-pre-line mb-6'>{item.description}</div>
-                  <div className='space-x-2'>
+              <Grid item key={index} xs={12} sm={8} md={4} xl={4}>
+                <div className='flex flex-col items-center team h-full py-6 px-4'>
+                  <img src={item.image} className='team-avatar'/>
+                  <div className='font-bold text-lg mt-4 text-white'>{item.name}</div>
+                  <div className='font-normal mb-4 text-white'>{item.position}</div>
+                  <div className='space-x-4 mb-4'>
                     {item.Twitter && (
-                      <IconButton component={Link} href={item.Twitter} className='bg-dark-10 hover:bg-dark-20'>
-                        <Twitter />
+                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
+                        <Twitter color='white'/>
                       </IconButton>
                     )}
                     {item.LinkedIn && (
-                      <IconButton component={Link} href={item.LinkedIn} className='bg-dark-10 hover:bg-dark-20'>
-                        <LinkedIn />
+                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main'>
+                        <LinkedIn color='white'/>
                       </IconButton>
                     )}
+                  </div>
+                  <div className='text-sm text-center whitespace-pre-line mb-6 text-white'>{item.description}</div>
+                 
+                </div>
+              </Grid>
+            ))}
+          </Grid>
+
+          <h1 className='mb-40 text-center title mt-110'>CXO Team</h1>
+          <Grid container spacing={{ xs: 3, xl: 3 }} className='justify-center'>
+            {[
+              {
+                name: 'GREGORY BUTZ',
+                image: require('assets/images/teams/Gregory_Butz.png').default.src,
+                position: 'Chief Marketing Officer',
+                Twitter: 'https://twitter.com/gregorybutz',
+                LinkedIn: 'https://www.linkedin.com/in/gregorybutz',
+                description: 'A marketing executive with 20+ years of experience across world class client and agency-side organizations\nProven consumer advocate who has driven $3B in net-new revenue through brand strategy, innovation, and digital activations\nSnapshot of experience includes BBDO, DDB, Razorfish, Salesforce, PepsiCo, McDonald’s, MillerCoors, and Walgreens.\nA passionate Web3 marketer helping brands transition into the metaverse\nMBA: University of Chicago Booth School of Business'
+              },
+              {
+                name: 'ALLEN DAM',
+                image: require('assets/images/teams/Allen_Dam.png').default.src,
+                position: 'Chief Content Officer',
+                LinkedIn: 'https://www.linkedin.com/in/allen-v-dam-66b7bb1',
+                description: 'Over 20 years of experiences in Hollywood Film Industry\nExecutive Producer of Expendable 4, Rambo 5 featuring Sylvester Stallone, Lamborghini the Legend featuring Alec Baldwin and Antonio Banderas and Bull Brothers\nA Hollywood executive with film credits on Fast & Furious 6 and Tokyo Drift, Trainspotting, Notorious and Wonder\nMajored in Visual Environmental Studies at Harvard'
+              },
+              {
+                name: 'RUBY NGUYEN',
+                image: require('assets/images/teams/Ruby_Nguyen.png').default.src,
+                position: 'Chief Operations Officer',
+                Twitter: 'https://twitter.com/zubi_on_rail',
+                LinkedIn: 'https://www.linkedin.com/in/runguyen',
+                description: 'COO at Spores Network\n8+ years of experience in building new ventures, technology investment, sales, and operations\nFormer Founding Member at One Mount, a corporate venture builder with over $100M in investment\nFormer SEA Regional Lead, Partner Management at Facebook\nMBA, University of Chicago Booth School of Business'
+              },
+              {
+                name: 'Phung Minh',
+                image: require('assets/images/teams/phung-minh.png').default.src,
+                position: 'Engineering Director',
+                Twitter: 'https://twitter.com/jdiddymac',
+                LinkedIn: 'https://www.linkedin.com/in/jeffreylee888',
+                description: 'Engineering Director at Spores\n\nAn e-commerce expert with 17+ years of experience across multiple fields and start-ups.An passionate advocate for blockchain and its applications.'
+              }
+            ].map((item, index) => (
+              <Grid item key={index} xs={12} sm={8} md={4} xl={3}>
+                <div className={classNames('flex flex-col items-center team py-6 px-4 h-full team-item-h relative', showAllCXOTeamInfo && 'team-item-h-full')}>
+                  <img src={item.image} className='team-avatar'/>
+                  <div className='font-bold text-lg mt-4 text-white'>{item.name}</div>
+                  <div className='font-normal mb-4 text-white size-xs'>{item.position}</div>
+                  <div className='space-x-4 mb-4'>
+                    {item.Twitter && (
+                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
+                        <Twitter color='white'/>
+                      </IconButton>
+                    )}
+                    {item.LinkedIn && (
+                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main'>
+                        <LinkedIn color='white'/>
+                      </IconButton>
+                    )}
+                  </div>
+                  <div className='text-sm text-center whitespace-pre-line mb-6 text-white'>{item.description}</div>
+
+                  <div className='more-info'
+                    onClick={() => {
+                      setShowAllCXOTeamInfo((prev) => !prev)
+                    }}
+                  >
+                    <img src={'/assets/images/prev.svg'} className='arrow-icon'/>
+                  </div>
+                
+                </div>
+              </Grid>
+            ))}
+          </Grid>
+
+          <h1 className='mb-40 text-center title mt-110'>Advisor Team</h1>
+          <Grid container spacing={{ xs: 3, xl: 3 }} className='justify-center mb-100'>
+            {[
+              {
+                name: 'Roger Lim',
+                image: require('assets/images/teams/roger-lim.png').default.src,
+                position: 'Advisor',
+                Twitter: '',
+                LinkedIn: '',
+                description: 'Founding partner of NGC Ventures, one of the largest institutional investors of blockchain and distributed ledger technologies and has been a key contributor to a number of leading blockchain projects\nCo-Founder and Group CEO of Webvisions, a successful Pan-Asian cloud hosting company\nGeneral Partner of Innosight Ventures'
+              },
+              {
+                name: 'Dennis Chookaszian',
+                image: require('assets/images/teams/dennis-chookaszian.png').default.src,
+                position: 'Advisor, Governance',
+                Twitter: 'https://twitter.com/chookasd',
+                LinkedIn: 'https://www.linkedin.com/in/dennis-chookaszian/',
+                description: 'Former Chairman and CEO of CNA Insurance Companies, which was a $17 Billion multi line insurer with 20,000 employees\nFormer Board Director at 13 publicly-traded corporations\nDirector and Chairman of Audit Committee at CME Group\nDirector, Global Digital Asset & Cryptocurrency Association\nBA, Northwestern University\nMSc, Economics, The London School of Economics and Political Science\nMBA: University of Chicago Booth School of Business'
+              },
+              {
+                name: 'Rishad Tobaccowala',
+                image: require('assets/images/teams/rishad-tobaccowala.png').default.src,
+                position: 'Advisor, Spores Network',
+                Twitter: 'https://twitter.com/rishad',
+                LinkedIn: 'https://www.linkedin.com/in/rishadtobaccowala/',
+                description: 'Author of Restoring the Soul of Business: Staying Human in the Age of Data\nAn advertising titan with 35+ years of experience with Publicis Groupe including::\nChief Growth Officer and Member of the Management Committee, Publicis Groupe\nChief Strategy & Innovation Officer, Viviaki\nCEO, Denuo\nChief Innovation Officer, Publicis Groupe Media\nPresident, Starcom IP\nPresident, Giant Step\nDirector and Founder of Interactive Marketing Group, Leo Burnett\nMBA: University of Chicago Booth School of Business'
+              },
+              {
+                name: 'Tho Tran',
+                image: require('assets/images/teams/tho-tran.png').default.src,
+                position: 'Tho Tran',
+                Twitter: '',
+                LinkedIn: '',
+                description: 'Founder of Sonat Game\n8+ years of experience in game development, responsible for some of the most played and downloaded games in Japanese, Korean, and European Markets'
+              }
+            ].map((item, index) => (
+              <Grid item key={index} xs={12} sm={8} md={4} xl={3}>
+                <div className={classNames('flex flex-col items-center team py-6 px-4 h-full team-item-h relative', showAllAdviorTeamInfo && 'team-item-h-full')}>
+                  <img src={item.image} className='team-avatar'/>
+                  <div className='font-bold text-lg mt-4 text-white'>{item.name}</div>
+                  <div className='font-normal mb-4 text-white size-xs'>{item.position}</div>
+                  <div className='space-x-4 mb-4'>
+                    {item.Twitter && (
+                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
+                        <Twitter color='white'/>
+                      </IconButton>
+                    )}
+                    {item.LinkedIn && (
+                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main'>
+                        <LinkedIn color='white'/>
+                      </IconButton>
+                    )}
+                  </div>
+                  <div className='text-sm text-center whitespace-pre-line mb-6 text-white'>{item.description}</div>
+                  <div className='more-info'
+                     onClick={() => {
+                      setShowAllAdvisorTeamInfo((prev) => !prev)
+                    }}
+                  >
+                    <img src={'/assets/images/prev.svg'} className='arrow-icon'/>
                   </div>
                 </div>
               </Grid>
             ))}
           </Grid>
 
-          <div className='flex flex-col items-center mt-20 md:mt-32 mb-8 md:mb-16'>
-            <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>OUR TEAM</h1>
-            <img src={require('assets/icons/icon-bumb.png').default.src} />
-          </div>
-          <Grid container spacing={{ xs: 3, xl: 6 }} className='justify-center'>
-            {[
-              {
-                name: 'RUBY NGUYEN',
-                image: require('assets/images/teams/Ruby_Nguyen.png').default.src,
-                position: 'CHIEF OPERATING OFFICER',
-                Twitter: 'https://twitter.com/zubi_on_rail',
-                LinkedIn: 'https://www.linkedin.com/in/runguyen',
-              },
-              {
-                name: 'GREGORY BUTZ',
-                image: require('assets/images/teams/Gregory_Butz.png').default.src,
-                position: 'CHIEF MARKETING OFFICER',
-                Twitter: 'https://twitter.com/gregorybutz',
-                LinkedIn: 'https://www.linkedin.com/in/gregorybutz',
-              },
-              {
-                name: 'JEFFREY LEE',
-                image: require('assets/images/teams/Jeffrey_Lee.png').default.src,
-                position: 'CHIEF ART CURATOR',
-                Twitter: 'https://twitter.com/jdiddymac',
-                LinkedIn: 'https://www.linkedin.com/in/jeffreylee888',
-              },
-              {
-                name: 'ALLEN DAM',
-                image: require('assets/images/teams/Allen_Dam.png').default.src,
-                position: 'CHIEF CONTENT OFFICER',
-                LinkedIn: 'https://www.linkedin.com/in/allen-v-dam-66b7bb1',
-              },
-            ].map((item, index) => (
-              <Grid item key={index} xs={12} sm={6} md={3}>
-                <div className='flex flex-col justify-between items-center bg-primary-main rounded-3xl h-full p-6'>
-                  <img src={item.image} />
-                  <div className='font-bold text-center text-lg mt-3'>{item.name}</div>
-                  <div className='font-medium text-center mb-3'>{item.position}</div>
-                  <div className='space-x-2'>
-                    {item.Twitter && (
-                      <IconButton component={Link} href={item.Twitter} className='bg-dark-10 hover:bg-dark-20'>
-                        <Twitter />
-                      </IconButton>
-                    )}
-                    {item.LinkedIn && (
-                      <IconButton component={Link} href={item.LinkedIn} className='bg-dark-10 hover:bg-dark-20'>
-                        <LinkedIn />
-                      </IconButton>
-                    )}
-                  </div>
-                </div>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </div>
-      <div className='pb-20'>
-        <Container maxWidth='md'>
-          <div className='flex flex-col items-center mt-20 md:mt-32 mb-16'>
-            <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>OUR PARTNERS</h1>
-            <img src={require('assets/icons/icon-bumb.png').default.src} />
-          </div>
+          <div className='divider mb-50'/>
+
+          <h1 className='title text-center mb-50'>Our Partners</h1>
           <Grid container columnSpacing={6} rowSpacing={10} className='justify-center'>
             {[
               { name: '1_NGC_Venture.svg', width: 280 },
@@ -145,7 +218,7 @@ const TheTeam = () => {
               { name: '12_Lupa_Capital.svg', width: 300 },
               { name: '13_Maven_Capital.png', width: 280 },
             ].map((item, index) => (
-              <Grid item key={index} xs={6} md={4} lg={3} className='flex justify-center items-center'>
+              <Grid item key={index} xs={6} md={3} lg={2} className='flex justify-center items-center'>
                 <img
                   src={require(`assets/images/partners/${item.name}`).default.src}
                   style={{ width: item.width - 60 }}
@@ -153,69 +226,7 @@ const TheTeam = () => {
               </Grid>
             ))}
           </Grid>
-        </Container>
-        <Container>
-          <div className='flex flex-col items-center mt-32 mb-16'>
-            <h1 className='font-black text-center text-4xl md:text-6xl py-4 md:py-8'>ROADMAP</h1>
-            <img src={require('assets/icons/icon-bumb.png').default.src} />
-          </div>
-          <Grid container columnSpacing={6} className='justify-center'>
-            {[
-              [
-                { timeline: 'Q3 2021', fetures: ['LP Staking', 'Launch NFT marketplace', 'ERC-1155 experiment'] },
-                {
-                  timeline: 'Q4 2021',
-                  fetures: ['Integrating BSC ecosystem', 'Polygon/Matic layer-2 solution', 'Gamestore'],
-                },
-              ],
-              [
-                {
-                  timeline: 'H1 2022',
-                  fetures: [
-                    'Mobile web / Mobile app',
-                    'NFT-DeFi experiments',
-                    'Fiat payment solution',
-                    'Cardano: experiment and testing',
-                  ],
-                },
-                {
-                  timeline: 'H2 2022',
-                  fetures: ['Cardano integration', 'DeFi applications for NFTs', 'NFT evaluation tools intergration'],
-                },
-              ],
-              [
-                { timeline: 'H1 2023', fetures: ['Cross-chain payment solution', 'Expanding to more blockchains'] },
-                {
-                  timeline: 'H2 2023',
-                  fetures: [
-                    'White label solutions',
-                    'SKD for partnership development',
-                    'Integrating NFT cross-chain solutions',
-                  ],
-                },
-              ],
-            ].map((items, index) => (
-              <Grid item key={index} xs={12} md={8} lg={4}>
-                {items.map((item, index) => (
-                  <div key={index}>
-                    <div className='flex items-center'>
-                      <ClearAll fontSize='large' /> <span className='font-bold text-2xl ml-2'>{item.timeline}</span>
-                    </div>
-                    <div className='mt-4 mb-12'>
-                      {item.fetures.map((feature, index) => (
-                        <div key={index} className='text-lg bg-gray-100 rounded mb-4 p-4'>
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
-      </div>
-      <Contact />
+      
     </div>
   );
 };

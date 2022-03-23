@@ -21,3 +21,153 @@ a {
   border-radius: 20px;
 }
 
+.btn {
+  height: 52px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(62, 72, 100, 0.05);
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262627;
+}
+
+.btn-small {
+  height: 36px;
+  border-radius: 4px;
+}
+
+.btn-main {
+  background: #EECE7C;
+}
+
+.btn-black {
+  background: #3C3C3E;
+  color: #ffffff;
+  &:hover {
+    color: #ffffff;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  color: #3C3C3E;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mx-8 {
+  margin: 0 8px !important;
+}
+
+.mb-12 {
+  margin-bottom: 12px !important;
+}
+
+.mx-10 {
+  margin: 0 10px !important;
+}
+
+.mx-16 {
+  margin: 0 16px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+.mb-26 {
+  margin-bottom: 26px !important;
+}
+
+.news-item {
+  background: #FCFCFC;
+  box-shadow: 0px 4px 15px rgba(62, 72, 100, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.h-214 {
+  height: 214px;
+}
+
+.team {
+  background: radial-gradient(120.63% 82.26% at 50% 25.12%, #333333 0%, #484848 23.96%, #333333 58.13%);
+  border-radius: 10px;
+  overflow: hidden;;
+}
+
+.team-avatar {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 120px;
+}
+
+.mt-110 {
+  margin-top: 110px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+
+.divider {
+  border-bottom: 1px solid #CDD5E4;
+}
+
+.team-item-h {
+  max-height: 545px;
+  transition: all 0.3s;
+}
+
+.team-item-h-full {
+  max-height: 100%;
+}
+
+.more-info {
+  background-color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  .arrow-icon {
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+  }
+}
+
+.team-item-h-full {
+  .more-info {
+    .arrow-icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}

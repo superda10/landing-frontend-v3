@@ -25,10 +25,10 @@
   height: 30px;
   border-radius: 50%;
   &:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: #ebebeb;
   }
   .arrowIcon {
-    width: 10px;
+    width: 8px;
   }
 }
 
@@ -38,13 +38,13 @@
     transform: rotate(180deg);
   }
   @media (max-width: 767px) {
-    right: -13px;
+    right: -20px;
   }
 }
 
 .prevArrow {
   left: -35px;
   @media (max-width: 767px) {
-    left: -13px;
+    left: -20px;
   }
 }

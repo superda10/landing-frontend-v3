@@ -1,0 +1,129 @@
+
+
+.container {
+  padding-top: 20px;
+  .btn {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #3C3C3E;
+    text-decoration: underline !important;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .icon {
+      transform: rotate(180deg);
+      margin-left: 10px;
+    }
+  }
+
+  .top {
+    padding: 0 10px 30px 50px;
+  }
+
+  .group {
+    padding: 50px;
+  }
+
+  .bg {
+    background-color: #F5F6F8;
+  }
+
+  .member {
+    text-align: center;
+    .avatar {
+      margin: 0 auto;
+      width: 181px;
+      margin-bottom: 16px;
+    }
+    .name {
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: #333333;
+      margin-bottom: 2px;
+    }
+    .position {
+      text-align: center;
+      font-weight: 500;
+      font-size: 13px;
+      color: #333333;
+      margin-bottom: 10px;
+    }
+    .icon {
+      width: 25px;
+    }
+  }
+
+  .item {
+    background: #333333;
+    border-radius: 10px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    max-width: 320px;
+    padding: 20px;font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-start;
+    .cupIcon {
+      width: 24px;
+      margin-right: 15px;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+  }
+  .project{ 
+    margin: 0 20px;
+  }
+
+  @media (max-width: 767px) {
+    .top {
+      padding: 0 10px 16px 20px;
+      flex-direction: column;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      .btn {
+        margin-bottom: 16px;
+      }
+    }
+    .right {
+      flex-direction: column;
+      .item {
+        max-width: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+    .group {
+      padding: 20px;
+    }
+    .members {
+      flex-direction: column;
+      align-items: center !important;
+      .member {
+        margin-bottom: 20px;
+      }
+    }
+    .projects {
+      flex-direction: column;
+      align-items: center !important;
+      
+    }
+
+    .project {
+      margin-bottom: 20px;
+      .projectImage {
+        width: 100%;
+      }
+    }
+  }
+}

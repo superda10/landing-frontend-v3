@@ -1,0 +1,27 @@
+.container {
+  .title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 18px;
+  }
+
+  .content {
+    background: #FAFAFA;
+    border: 1px solid #D5D5DC;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 40px 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 10px;
+    .content {
+      padding: 20px;
+    }
+  }
+}

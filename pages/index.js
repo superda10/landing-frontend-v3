@@ -1,10 +1,10 @@
 import { PublicLayout } from 'layouts';
-import { Home } from 'views/Home';
+import HomePage from 'views/HomePage';
 
 const App = () => {
   return (
     <PublicLayout>
-      <Home />
+      <HomePage />
     </PublicLayout>
   );
 };
