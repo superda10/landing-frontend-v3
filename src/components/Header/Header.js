@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import classNames from 'classnames'
 import classes from './Header.module.scss'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Header = () => {
   const [ show, setShow ] = useState(false)
+  const { pathname } = useRouter()
+
   return (
     <div className={classNames('flex items-center justify-between', classes.container)}>
       <Link href='/'>
@@ -20,21 +23,27 @@ const Header = () => {
       <ul className={classNames(classes.menus, show && classes.show)}>
         <li>
           <Link href='/about'>
-            <a onClick={() => {setShow(false)}}>
+            <a onClick={() => {setShow(false)}}
+              className={classNames(pathname === '/about' && classes.active)}
+            >
               About
             </a>
           </Link>
         </li>
         <li>
           <Link href='/team'>
-            <a onClick={() => {setShow(false)}}>
+            <a onClick={() => {setShow(false)}}
+              className={classNames(pathname === '/team' && classes.active)}
+            >
               Team
             </a>
           </Link>
         </li>
         <li>
           <Link href='/news'>
-            <a onClick={() => {setShow(false)}}>
+            <a onClick={() => {setShow(false)}}
+              className={classNames(pathname === '/news' && classes.active)}
+            >
               News
             </a>
           </Link>

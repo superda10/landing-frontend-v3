@@ -1,8 +1,36 @@
 @import 'customize';
 
+@font-face {
+  font-family: 'segoe ui variable';
+  src: url('/assets/font/SegoeUIVariableStaticText.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'segoe ui variable';
+  src: url('/assets/font/SegoeUIVariableStaticTextLight.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'segoe ui variable';
+  src: url('/assets/font/SegoeUIVariableStaticTextSemibold.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'segoe ui variable';
+  src: url('/assets/font/SegoeUIVariableStaticTextBold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   font-size: 1rem;
-  font-family: Montserrat, sans-serif !important;
+  font-family: segoe ui variable, sans-serif !important;
 }
 
 * {
@@ -111,10 +139,16 @@ a {
   overflow: hidden;;
 }
 
+.team-avatar-large {
+  width: 189px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+}
+
 .team-avatar {
   border: 3px solid #ffffff;
   border-radius: 50%;
-  width: 120px;
+  width: 173px;
 }
 
 .mt-110 {
@@ -131,7 +165,7 @@ a {
 }
 
 .team-item-h {
-  max-height: 545px;
+  max-height: 555px;
   transition: all 0.3s;
 }
 
@@ -170,4 +204,14 @@ a {
     font-size: 24px;
     line-height: 36px;
   }
+}
+
+.mh40 {
+  min-height: 40px;
+}
+
+.custom-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }

@@ -3,6 +3,7 @@ import classes from './PublicLayout.module.scss'
 import ContactUs from 'components/ContactUs';
 import Footer from 'components/Footer';
 import Banner from 'components/Banner';
+import SideMenus from './SideMenus/SideMenus';
 
 const PublicLayout = ({ children }) => {
   return (
@@ -23,6 +24,8 @@ const PublicLayout = ({ children }) => {
       <div className={classes.footer}>
         <Footer />
       </div>
+
+      <SideMenus />
     </div>
   );
 };

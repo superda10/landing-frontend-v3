@@ -11,6 +11,12 @@
     max-width: 400px;
   }
 
+  .logo {
+    width: 100px !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+  }
+
   @media (max-width: 767px) {
     .pool {
       max-width: 100%;

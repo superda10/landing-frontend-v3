@@ -1,14 +1,13 @@
 import React from 'react'
 import classNames from 'classnames'
 import classes from './PoolItem.module.scss'
-import { Button } from '@mui/material'
 
 const PoolItem = ({item}) => {
   return (
     <div className={classes.container}>
       <div className={classNames(classes.content, classes.bb1)}>
         <div className='flex items-center mb-12'>
-          <img src={item.logo} className={classes.logo} alt='logo'/>
+          <img src={item.logo} className={classNames(classes.logo, item.logoClass)} alt='logo'/>
           <div className='flex-1'>
             <h4 className={classes.name}>
               {item.poolName}
@@ -78,9 +77,13 @@ const PoolItem = ({item}) => {
         </div>
 
         <div className='flex items-center justify-between'>
-          <Button className='btn btn-main btn-small'>
+          <a className='btn btn-main btn-small'
+            href={item.learnMore}
+            target='_blank'
+            rel="noreferrer"
+          >
             Learn more
-          </Button>
+          </a>
 
          <div className='flex items-center'>
            <a className='mx-1'

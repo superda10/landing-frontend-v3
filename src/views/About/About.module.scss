@@ -185,7 +185,7 @@
                 line-height: 20px;
                 color: #FFFFFF;
                 position: relative;
-                padding-left: 16px;
+                padding-left: 14px;
                 &:after {
                     position: absolute;
                     content: '';
@@ -196,6 +196,9 @@
                     left: 0;
                     top: 8px;
                 }
+            }
+            .mr10 {
+                margin-right: 10px;
             }
         }
     }

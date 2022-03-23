@@ -1,8 +1,8 @@
 .container {
   text-align: center;
-  padding: 100px 0 80px 0;
+  padding: 0 0 20px 0;
+  position: relative;
   .largeLogo {
-    
     margin: 0 auto;
     margin-bottom: 100px;
   }
@@ -15,6 +15,12 @@
     margin: 0 auto;
     margin-bottom: 18px;
   }
+  .content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 140px;
+  }
   .getspo {
     margin-top: 16px;
   }
@@ -26,6 +32,10 @@
 
   @media (max-width: 767px) {
     padding: 0 20px;
+    .content {
+      position: static;
+      margin-top: -40px;
+    }
     .largeLogo {
       width: 100px;
     }

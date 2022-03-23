@@ -5,6 +5,7 @@ import Launchpad from './components/Launchpad'
 import Marketplace from './components/Marketplace'
 import PartnerWithUs from './components/PartnerWithUs'
 import Menus from './components/Menus'
+import SupportForm from 'views/Home/components/SupportForm'
 
 const TABS = [{
   label: 'Launchpad',
@@ -19,6 +20,7 @@ const TABS = [{
 
 const HomePage = () => {
   const [currentTab, setCurrentTab] = useState('LAUNCHPAD')
+
   return (
     <div className={classes.contaniner}>
       <Menus currentTab={currentTab}

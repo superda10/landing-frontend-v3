@@ -1,0 +1,67 @@
+.menus {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 20px;
+  z-index: 999;
+  .menu {
+    margin-bottom: 22px;
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    .label {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      color: #3C3C3E;
+      opacity: 0;
+      transition: all 0.3s;
+      visibility: hidden;
+    }
+    .icon {
+      margin-left: 20px;
+    }
+    &:hover {
+      .label {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .menuContent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    .icon {
+      margin-left: 20px;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      opacity: 0;
+      transition: all 0.3s;
+      visibility: hidden;
+      .btnLink {
+        margin-bottom: 10px;
+      }
+    }
+
+    &:hover {
+      .links {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

@@ -98,12 +98,15 @@ const About = () => {
                         <li className={classes.item}>
                             Revenue from Incubated Projects 
                         </li>
-                        <li className={classes.item}>
-                            GameFi Revenue Sources
+                        <li className='flex items-center flex-wrap'>
+                            <div className={classNames(classes.item, classes.mr10)}>
+                                GameFi Revenue Sources
+                            </div>
+                            <div className={classes.item}>
+                                Metaverse Revenue Sources
+                            </div>
                         </li>
-                        <li className={classes.item}>
-                            Metaverse Revenue Sources
-                        </li>
+                        
                     </ul>
                 </div>
             </div>

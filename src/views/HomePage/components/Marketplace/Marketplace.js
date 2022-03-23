@@ -74,7 +74,7 @@ const Marketplace = () => {
       </div>
      
 
-      <img src='/assets/images/gamestore.png' className={classes.img} />
+      <img src='/assets/images/gamestore.png' className={classNames(classes.img, classes.mb24)} />
       <div className='flex justify-center'>
         <a className='btn btn-black mb-100 center'
           href='https://games.spores.app/'

@@ -1,12 +1,28 @@
 import React from 'react'
 import classNames from 'classnames'
+import ReactPlayer from 'react-player'
 import classes from './Banner.module.scss'
 import GetSPO from 'components/GetSPO'
 
 const Banner = () => {
   return (
     <div className={classes.container}>
-      <img src='/assets/images/large-logo.png' className={classes.largeLogo} alt='logo'/>
+      <div className={classes.videoWrapper}>
+          <ReactPlayer
+            url="/assets/images/video.mp4"
+            className={classes.reactPlayer}
+            playing={true}
+            width="100%"
+            height="100%"
+            controls={false}
+            // light='/assets/images/video-thumb.png'
+            loop={true}
+            muted={true}
+            autoPlay={true}
+          />
+        </div>
+      {/* <img src='/assets/images/large-logo.png' className={classes.largeLogo} alt='logo'/> */}
+      <div className={classes.content}>
       <h2 className={classes.title}>
         GameFi. Metaverse.
         Launchpad and Publisher
@@ -32,7 +48,7 @@ const Banner = () => {
       <div className={classes.getspo}>
         <GetSPO />
       </div>
-     
+      </div>
     </div>
   )
 }

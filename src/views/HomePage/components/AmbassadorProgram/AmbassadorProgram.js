@@ -80,7 +80,7 @@ const AmbassadorProgram = () => {
                         </ul>
                     </div>
                     <div className={classes.content}>
-                    <p className={classes.label}>Brand Advocacy t</p>
+                    <p className={classes.label}>Brand Advocacy</p>
                         <ul className={classes.list}>
                             <li className={classes.item}>
                                 Become a product expert and brand ambassador

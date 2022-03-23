@@ -14,6 +14,8 @@ const TABS = [{
 
 const PartnerWithUs = () => {
   const [currentTab, setCurrentTab] = useState('INCUBATOR')
+  const [showDetail, setShowDetail] = useState(false)
+
   return (
     <div className={classes.container}>
       <Tabs tabs={TABS}
@@ -23,17 +25,20 @@ const PartnerWithUs = () => {
 
       <div className={classes.content}>
         { currentTab === 'INCUBATOR'
-          && <Incubator />
+          && <Incubator showDetail={showDetail}
+            setShowDetail={setShowDetail}
+          />
         }
         { currentTab === 'AMBASSADOR_PROGRAM'
           && <AmbassadorProgram />
         }
       </div>
-      
-      <Tabs tabs={TABS}
+      { (currentTab === 'AMBASSADOR_PROGRAM' || showDetail)
+       && <Tabs tabs={TABS}
         currentTab={currentTab}
         handleSelectTab={setCurrentTab}
       />
+      }
     </div>
   )
 }

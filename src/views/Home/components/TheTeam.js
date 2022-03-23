@@ -9,12 +9,13 @@ const TheTeam = () => {
 
   return (
     <div id='team'>
+      <div className='custom-container'>
           <h1 className='title text-center mb-40'>Our Foundation Team</h1>
           <Grid
             container
             spacing={{ xs: 3, xl: 3 }}
             columns={{ xs: 12, sm: 12, md: 12, xl: 12 }}
-            className='justify-center'
+            className='justify-center '
           >
             {[
               {
@@ -44,7 +45,7 @@ const TheTeam = () => {
             ].map((item, index) => (
               <Grid item key={index} xs={12} sm={8} md={4} xl={4}>
                 <div className='flex flex-col items-center team h-full py-6 px-4'>
-                  <img src={item.image} className='team-avatar'/>
+                  <img src={item.image} className='team-avatar-large'/>
                   <div className='font-bold text-lg mt-4 text-white'>{item.name}</div>
                   <div className='font-normal mb-4 text-white'>{item.position}</div>
                   <div className='space-x-4 mb-4'>
@@ -67,7 +68,7 @@ const TheTeam = () => {
           </Grid>
 
           <h1 className='mb-40 text-center title mt-110'>CXO Team</h1>
-          <Grid container spacing={{ xs: 3, xl: 3 }} className='justify-center'>
+          <Grid container spacing={{ xs: 3, xl: 3 }} className='justify-center '>
             {[
               {
                 name: 'GREGORY BUTZ',
@@ -96,17 +97,17 @@ const TheTeam = () => {
                 name: 'Phung Minh',
                 image: require('assets/images/teams/phung-minh.png').default.src,
                 position: 'Engineering Director',
-                Twitter: 'https://twitter.com/jdiddymac',
-                LinkedIn: 'https://www.linkedin.com/in/jeffreylee888',
+                Twitter: '',
+                LinkedIn: '',
                 description: 'Engineering Director at Spores\n\nAn e-commerce expert with 17+ years of experience across multiple fields and start-ups.An passionate advocate for blockchain and its applications.'
               }
             ].map((item, index) => (
               <Grid item key={index} xs={12} sm={8} md={4} xl={3}>
                 <div className={classNames('flex flex-col items-center team py-6 px-4 h-full team-item-h relative', showAllCXOTeamInfo && 'team-item-h-full')}>
                   <img src={item.image} className='team-avatar'/>
-                  <div className='font-bold text-lg mt-4 text-white'>{item.name}</div>
-                  <div className='font-normal mb-4 text-white size-xs'>{item.position}</div>
-                  <div className='space-x-4 mb-4'>
+                  <div className='font-bold text-lg mt-4 text-white text-uppercase'>{item.name}</div>
+                  <div className='font-normal mb-4 text-white size-xs text-uppercase'>{item.position}</div>
+                  <div className='space-x-4 mb-4 mh40'>
                     {item.Twitter && (
                       <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
                         <Twitter color='white'/>
@@ -134,7 +135,7 @@ const TheTeam = () => {
           </Grid>
 
           <h1 className='mb-40 text-center title mt-110'>Advisor Team</h1>
-          <Grid container spacing={{ xs: 3, xl: 3 }} className='justify-center mb-100'>
+          <Grid container spacing={{ xs: 3, xl: 3 }} className='justify-center mb-100 '>
             {[
               {
                 name: 'Roger Lim',
@@ -163,7 +164,7 @@ const TheTeam = () => {
               {
                 name: 'Tho Tran',
                 image: require('assets/images/teams/tho-tran.png').default.src,
-                position: 'Tho Tran',
+                position: 'Advisor',
                 Twitter: '',
                 LinkedIn: '',
                 description: 'Founder of Sonat Game\n8+ years of experience in game development, responsible for some of the most played and downloaded games in Japanese, Korean, and European Markets'
@@ -172,9 +173,9 @@ const TheTeam = () => {
               <Grid item key={index} xs={12} sm={8} md={4} xl={3}>
                 <div className={classNames('flex flex-col items-center team py-6 px-4 h-full team-item-h relative', showAllAdviorTeamInfo && 'team-item-h-full')}>
                   <img src={item.image} className='team-avatar'/>
-                  <div className='font-bold text-lg mt-4 text-white'>{item.name}</div>
-                  <div className='font-normal mb-4 text-white size-xs'>{item.position}</div>
-                  <div className='space-x-4 mb-4'>
+                  <div className='font-bold text-lg mt-4 text-white text-uppercase'>{item.name}</div>
+                  <div className='font-normal mb-4 text-white size-xs text-uppercase'>{item.position}</div>
+                  <div className='space-x-4 mb-4 mh40'>
                     {item.Twitter && (
                       <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
                         <Twitter color='white'/>
@@ -198,11 +199,12 @@ const TheTeam = () => {
               </Grid>
             ))}
           </Grid>
+          </div>
 
           <div className='divider mb-50'/>
-
+        <div className='custom-container'>
           <h1 className='title text-center mb-50'>Our Partners</h1>
-          <Grid container columnSpacing={6} rowSpacing={10} className='justify-center'>
+          <Grid container columnSpacing={6} rowSpacing={10} className='justify-center '>
             {[
               { name: '1_NGC_Venture.svg', width: 280 },
               { name: '2_Polygon.png', width: 280 },
@@ -226,7 +228,7 @@ const TheTeam = () => {
               </Grid>
             ))}
           </Grid>
-      
+          </div>
     </div>
   );
 };

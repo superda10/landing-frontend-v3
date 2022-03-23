@@ -7,8 +7,8 @@ import PartnerDetail from './PartnerDetail'
 
 const partners = [{}]
 
-const Incubator = () => {
-  const [showDetail, setShowDetail] = useState(false)
+const Incubator = ({ showDetail, setShowDetail }) => {
+  
   return (
     <div className={classes.container}>
       <h2 className='title text-center mb-20'>

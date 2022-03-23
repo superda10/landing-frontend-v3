@@ -2,6 +2,7 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 8px;
   @media (min-width: 1920px) {
     width: 100%;
     height: auto;
@@ -31,7 +32,6 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #f8f8f8;
   &:hover {
     background-color: #efefef;
   }
@@ -41,7 +41,7 @@
 }
 
 .nextArrow {
-  right: 24px;
+  right: -50px;
   img {
     transform: rotate(180deg);
   }
@@ -51,7 +51,7 @@
 }
 
 .prevArrow {
-  left: 24px;
+  left: -50px;
   @media (max-width: 767px) {
     left: 10px;
   }

@@ -7,7 +7,7 @@
   text-align: center;
   padding: 50px 50px 25px 50px;
   .logo {
-    width: 100%;
+    width: 200px;
     margin-bottom: 25px;
   }
   .description {
@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     text-decoration: underline !important;
+    cursor: pointer;
   }
   .icon {
     margin-left: 8px;
@@ -49,4 +50,7 @@
 
 .showDetail {
   border-radius: 8px 8px 0 0;
+  .logo {
+    width: 100%;
+  }
 }

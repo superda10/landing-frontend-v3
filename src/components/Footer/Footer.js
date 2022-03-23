@@ -102,7 +102,7 @@ const Footer = () => {
                     </li>
                     <li className='mx-8'>
                       <a>
-                        <img src='/assets/images/socials/linkedIn.svg' className={classes.socialIcon} alt='icon'/>
+                        <img src='/assets/images/socials/linkedin.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
                   </ul>
