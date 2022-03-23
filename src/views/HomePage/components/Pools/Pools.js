@@ -29,7 +29,7 @@ const poolsUpcoming = [{
   id: 1
 }, {
   logo: '/assets/images/pools/Supernova2.svg',
-  poolName: 'Supernova',
+  poolName: 'Animal Concert',
   type: 'ANML',
   totalRaise: '$50,000',
   start: '25 March 2022 13:00',
