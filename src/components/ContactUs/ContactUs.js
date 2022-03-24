@@ -47,42 +47,42 @@ const ContactUs = () => {
             target='_blank'
             rel="noreferrer"
           >
-            <img src='/assets/images/socials/facebook.svg'/>
+            <div className={classes.facebook} />
           </a>
         </li>
         <li>
           <a href='https://twitter.com/Spores_Network'
             target='_blank'
             rel="noreferrer">
-            <img src='/assets/images/socials/twitter.svg'/>
+             <div className={classes.twitter} />
           </a>
         </li>
         <li>
           <a href='https://instagram.com/SporesNetwork'
             target='_blank'
             rel="noreferrer">
-            <img src='/assets/images/socials/instagram.svg'/>
+            <div className={classes.instagram} />
           </a>
         </li>
         <li>
           <a href='https://discord.gg/FYcdCycv'
             target='_blank'
             rel="noreferrer">
-            <img src='/assets/images/socials/discord.svg'/>
+            <div className={classes.discord} />
           </a>
         </li>
         <li>
           <a href='https://t.me/SporesOfficial'
             target='_blank'
             rel="noreferrer">
-            <img src='/assets/images/socials/telegram.svg'/>
+            <div className={classes.telegram} />
           </a>
         </li>
         <li>
           <a href='https://linkedin.com/company/SporesNetwork'
             target='_blank'
             rel="noreferrer">
-            <img src='/assets/images/socials/linkedin.svg'/>
+              <div className={classes.linkedin} />
           </a>
         </li>
       </ul>

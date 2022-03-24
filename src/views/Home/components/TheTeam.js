@@ -50,12 +50,12 @@ const TheTeam = () => {
                   <div className='font-normal mb-4 text-white'>{item.position}</div>
                   <div className='space-x-4 mb-4'>
                     {item.Twitter && (
-                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
+                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main btn-social'>
                         <Twitter color='white'/>
                       </IconButton>
                     )}
                     {item.LinkedIn && (
-                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main'>
+                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main btn-social'>
                         <LinkedIn color='white'/>
                       </IconButton>
                     )}
@@ -109,12 +109,12 @@ const TheTeam = () => {
                   <div className='font-normal mb-4 text-white size-xs text-uppercase'>{item.position}</div>
                   <div className='space-x-4 mb-4'>
                     {item.Twitter && (
-                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
+                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main btn-social'>
                         <Twitter color='white'/>
                       </IconButton>
                     )}
                     {item.LinkedIn && (
-                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main'>
+                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main btn-social'>
                         <LinkedIn color='white'/>
                       </IconButton>
                     )}
@@ -177,12 +177,12 @@ const TheTeam = () => {
                   <div className='font-normal mb-4 text-white size-xs text-uppercase'>{item.position}</div>
                   <div className='space-x-4 mb-4'>
                     {item.Twitter && (
-                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
+                      <IconButton component={Link} href={item.Twitter} className='bg-primary-main btn-social'>
                         <Twitter color='white'/>
                       </IconButton>
                     )}
                     {item.LinkedIn && (
-                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main'>
+                      <IconButton component={Link} href={item.LinkedIn} className='bg-primary-main btn-social'>
                         <LinkedIn color='white'/>
                       </IconButton>
                     )}
@@ -202,28 +202,28 @@ const TheTeam = () => {
           </div>
 
           <div className='divider mb-50'/>
-        <div className='custom-container'>
+        <div className='custom-container-small'>
           <h1 className='title text-center mb-50'>Our Partners</h1>
-          <Grid container columnSpacing={6} rowSpacing={10} className='justify-center '>
+          <Grid container columnSpacing={2} rowSpacing={4} className='justify-center '>
             {[
-              { name: '1_NGC_Venture.svg', width: 280 },
-              { name: '2_Polygon.png', width: 280 },
-              { name: '3_Chain_Guardians.png', width: 200 },
-              { name: '4_Skyvision_Capital.svg', width: 280 },
-              { name: '5_Exnetwork_Capital.png', width: 220 },
-              { name: '6_SL2_Capital.svg', width: 260 },
-              { name: '7_OIG_Group.png', width: 220 },
-              { name: '8_Twin_Apex_Capital.png', width: 280 },
-              { name: '9_Card_Starter.png', width: 260 },
-              { name: '10_Pantera_ICO.png', width: 240 },
-              { name: '11_Token_Suite.png', width: 240 },
-              { name: '12_Lupa_Capital.svg', width: 300 },
-              { name: '13_Maven_Capital.png', width: 280 },
+              { name: '1_NGC_Venture.svg', width: 122 },
+              { name: '2_Polygon.png', width: 137 },
+              { name: '3_Chain_Guardians.png', width: 104 },
+              { name: '4_Skyvision_Capital.svg', width: 116 },
+              { name: '5_Exnetwork_Capital.png', width: 82 },
+              { name: '6_SL2_Capital.svg', width: 117 },
+              { name: '7_OIG_Group.png', width: 112 },
+              { name: '8_Twin_Apex_Capital.png', width: 139 },
+              { name: '9_Card_Starter.png', width: 73 },
+              { name: '10_Pantera_ICO.png', width: 107 },
+              { name: '11_Token_Suite.png', width: 91 },
+              { name: '12_Lupa_Capital.svg', width: 184 },
+              { name: '13_Maven_Capital.png', width: 137 },
             ].map((item, index) => (
               <Grid item key={index} xs={6} md={3} lg={2} className='flex justify-center items-center'>
                 <img
                   src={require(`assets/images/partners/${item.name}`).default.src}
-                  style={{ width: item.width - 60 }}
+                  style={{ width: item.width }}
                 />
               </Grid>
             ))}

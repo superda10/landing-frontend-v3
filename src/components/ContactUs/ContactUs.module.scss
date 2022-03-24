@@ -2,6 +2,13 @@
   margin-top: 40px;
   li {
     margin: 0 10px;
+    a {
+      &:hover {
+        .facebook, .twitter, .instagram, .discord, .telegram, .linkedin {
+          background-color: #87878D;
+        }
+      }
+    }
   }
 }
 
@@ -9,6 +16,60 @@
   border-top: 1px solid #D5D5DC;
   border-bottom: 1px solid #D5D5DC;
   padding: 80px 20px;
+
+  .facebook {
+    width: 20px;
+    height: 20px;
+    background-color: #3C3C3E;
+    -webkit-mask: url('/assets/images/socials/facebook.svg') no-repeat center;
+    mask: url('/assets/images/socials/facebook.svg') no-repeat center;
+    transition: all 0.3s;
+  }
+
+  .twitter {
+    width: 20px;
+    height: 20px;
+    background-color: #3C3C3E;
+    -webkit-mask: url('/assets/images/socials/twitter.svg') no-repeat center;
+    mask: url('/assets/images/socials/twitter.svg') no-repeat center;
+    transition: all 0.3s;
+  }
+
+  .instagram {
+    width: 20px;
+    height: 20px;
+    background-color: #3C3C3E;
+    -webkit-mask: url('/assets/images/socials/instagram.svg') no-repeat center;
+    mask: url('/assets/images/socials/instagram.svg') no-repeat center;
+    transition: all 0.3s;
+  }
+
+  .discord {
+    width: 20px;
+    height: 20px;
+    background-color: #3C3C3E;
+    -webkit-mask: url('/assets/images/socials/discord.svg') no-repeat center;
+    mask: url('/assets/images/socials/discord.svg') no-repeat center;
+    transition: all 0.3s;
+  }
+
+  .telegram {
+    width: 20px;
+    height: 20px;
+    background-color: #3C3C3E;
+    -webkit-mask: url('/assets/images/socials/telegram.svg') no-repeat center;
+    mask: url('/assets/images/socials/telegram.svg') no-repeat center;
+    transition: all 0.3s;
+  }
+
+  .linkedin {
+    width: 20px;
+    height: 20px;
+    background-color: #3C3C3E;
+    -webkit-mask: url('/assets/images/socials/linkedin.svg') no-repeat center;
+    mask: url('/assets/images/socials/linkedin.svg') no-repeat center;
+    transition: all 0.3s;
+  }
 
   @media (max-width: 767px) {
     .actions {
