@@ -15,18 +15,18 @@ const Footer = () => {
             <div className={classNames(classes.row, classes.mr100)}>
               <ul className={classNames(classes.menus, classes.mr50)}>
                 <li>
-                  <a>
+                  <a href='https://launchpad.spores.app/'
+                    target='_blank'
+                    rel="noreferrer"
+                  >
                     Launchpad
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href='https://marketplace.spores.app/explore'
+                    target='_blank'
+                    rel="noreferrer">
                     Marketplace
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    Partner with us
                   </a>
                 </li>
               </ul>
@@ -62,22 +62,36 @@ const Footer = () => {
                 <li>
                   <ul className={'flex items-center'}>
                     <li className='mx-8'>
-                      <a >
+                      <a 
+                        href='https://spores.medium.com/'
+                        target='_blank'
+                        rel="noreferrer"
+                      >
                         <img src='/assets/images/socials/medium.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
                     <li className='mx-8'>
-                      <a>
+                      <a
+                        href='https://instagram.com/SporesNetwork'
+                        target='_blank'
+                        rel="noreferrer"
+                      >
                         <img src='/assets/images/socials/instagram.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
                     <li className='mx-8'>
-                      <a>
+                      <a
+                        href='https://pinterest.com/SporesNetwork'
+                        target='_blank'
+                        rel="noreferrer"
+                      >
                         <img src='/assets/images/socials/printest.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
                     <li className='mx-8'>
-                      <a>
+                      <a href='https://facebook.com/SporesNetwork'
+                          target='_blank'
+                          rel="noreferrer">
                         <img src='/assets/images/socials/facebook.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
@@ -86,22 +100,38 @@ const Footer = () => {
                 <li>
                   <ul className={'flex items-center'}>
                     <li className='mx-8'>
-                      <a>
+                      <a
+                        href='https://t.me/SporesOfficial'
+                        target='_blank'
+                        rel="noreferrer"
+                      >
                         <img src='/assets/images/socials/telegram.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
                     <li className='mx-8'>
-                      <a>
+                      <a
+                        href='https://twitter.com/Spores_Network'
+                        target='_blank'
+                        rel="noreferrer"
+                      >
                         <img src='/assets/images/socials/twitter.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
                     <li className='mx-8'>
-                      <a>
+                      <a
+                        href='https://www.youtube.com/channel/UC9pgjF_aWprnVodvxO7OPkA'
+                        target='_blank'
+                        rel="noreferrer"
+                      >
                         <img src='/assets/images/socials/youtube.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
                     <li className='mx-8'>
-                      <a>
+                      <a
+                        href='https://linkedin.com/company/SporesNetwork'
+                        target='_blank'
+                        rel="noreferrer"
+                      >
                         <img src='/assets/images/socials/linkedin.svg' className={classes.socialIcon} alt='icon'/>
                       </a>
                     </li>
@@ -116,22 +146,34 @@ const Footer = () => {
             </h4>
             <ul className={classes.menus}>
               <li>
-                <Link href='/'>
-                  <a>
+                <Link>
+                  <a
+                    href='https://marketplace.spores.app/terms-of-use'
+                    target='_blank'
+                    rel="noreferrer"
+                  >
                     Term of use
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href='/'>
-                  <a>
+                <Link>
+                  <a
+                   href='https://marketplace.spores.app/privacy-policy'
+                   target='_blank'
+                   rel="noreferrer"
+                  >
                     Privacy Policy
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href='/'>
-                  <a>
+                <Link>
+                  <a
+                    href='https://marketplace.spores.app/cookie-statement'
+                    target='_blank'
+                    rel="noreferrer"
+                  >
                     Cookie Statement
                   </a>
                 </Link>
