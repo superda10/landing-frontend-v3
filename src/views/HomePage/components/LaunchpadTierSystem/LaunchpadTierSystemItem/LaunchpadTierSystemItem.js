@@ -17,7 +17,7 @@ const LaunchpadTierSystemItem = ({ data }) =>{
                 {data.map((item,key) => (
                         <tr key={key}>
                             <td className={classNames(classes.text, item.status === true && classes.bgr)}>{item.Tiers}</td>
-                            <td className={classNames(classes.lable, item.status === true && classes.bgr)}>{item.vip1}</td>
+                            <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip1}</td>
                             <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip2}</td>
                             <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip3}</td>
                             <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip4}</td>
