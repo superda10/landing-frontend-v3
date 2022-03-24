@@ -55,6 +55,13 @@
       width: 200px;
       .btnLink {
         margin-bottom: 10px;
+        box-shadow: 0px 0px 15px rgba(62, 72, 100, 0.05);
+        border-radius: 8px;
+        img {
+          height: 30px;
+          width: auto;
+          border-radius: 8px;
+        }
       }
     }
 
