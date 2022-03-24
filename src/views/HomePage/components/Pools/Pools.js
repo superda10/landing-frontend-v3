@@ -16,22 +16,6 @@ const TABS = [{
 }]
 
 const poolsUpcoming = [{
-  logo: '/assets/images/pools/Supernova.svg',
-  poolName: 'Supernova',
-  type: 'LFC',
-  totalRaise: '$30,000',
-  start: '23 March 2022 13:00',
-  end: '24 March 2022 14:00 (UTC)',
-  price: '1 LFC = $0.30',
-  registrationEnd: '22 hours, 5 minutes',
-  percent: '0%',
-  current: '0',
-  id: 1,
-  learnMore: 'https://launchpad.spores.app/supernova',
-  website: 'https://sunday.games/supernova/',
-  twitter: 'https://twitter.com/SupernovaVerse',
-  telegram: 'https://t.me/supernova_game'
-}, {
   logo: '/assets/images/pools/Animal.svg',
   poolName: 'Animal Concerts',
   type: 'ANML',
@@ -69,6 +53,23 @@ const poolsUpcoming = [{
 const poolsLive = []
 
 const poolsEnded = [{
+  logo: '/assets/images/pools/Supernova.svg',
+  poolName: 'Supernova',
+  type: 'LFC',
+  totalRaise: '$30,000',
+  start: '23 March 2022 13:00',
+  end: '24 March 2022 14:00 (UTC)',
+  price: '1 LFC = $0.30',
+  registrationEnd: '22 hours, 5 minutes',
+  percent: '100%',
+  current: '$30,000',
+  poolStatus: 'ENDED',
+  id: 1,
+  learnMore: 'https://launchpad.spores.app/supernova',
+  website: 'https://sunday.games/supernova/',
+  twitter: 'https://twitter.com/SupernovaVerse',
+  telegram: 'https://t.me/supernova_game'
+}, {
   logo: '/assets/images/pools/wizardia.svg',
   poolName: 'Wizardia',
   type: 'WZRD',
