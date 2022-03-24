@@ -6,9 +6,14 @@
   .tabs {
     margin-bottom: 36px;
   }
+  .pools {
+    display: flex;
+    align-items: flex-start;
+  }
   .pool { 
     padding: 0 15px;
     max-width: 400px;
+    flex: 1;
   }
 
   .logo {
@@ -18,8 +23,13 @@
   }
 
   @media (max-width: 767px) {
+    .pools {
+      flex-direction: column;
+    }
     .pool {
       max-width: 100%;
+      width: 100%;
+      margin-bottom: 10px;
     }
   }
 }

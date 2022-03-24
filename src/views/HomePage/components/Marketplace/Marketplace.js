@@ -108,11 +108,11 @@ const Marketplace = () => {
         </div>
           { VR_IMAGES.map((item, i) => (
             <div key={i}>
-              <img src={item.image} className={classes.img} alt='img'/>
+              <img src={item.image} className={classes.imageVr} alt='img'/>
             </div>
           )) }
         </Slider>
-      <div className='flex justify-center'>
+      <div className='flex justify-center mt26'>
         <a className='btn btn-black mb-100 center'
           href='http://republique.spores.app/'
           target='_blank'

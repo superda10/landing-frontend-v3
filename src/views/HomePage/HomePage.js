@@ -5,7 +5,6 @@ import Launchpad from './components/Launchpad'
 import Marketplace from './components/Marketplace'
 import PartnerWithUs from './components/PartnerWithUs'
 import Menus from './components/Menus'
-import SupportForm from 'views/Home/components/SupportForm'
 
 const TABS = [{
   label: 'Launchpad',

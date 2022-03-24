@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import classNames from 'classnames'
+import SupportForm from 'views/Home/components/SupportForm'
 import classes from './SideMenus.module.scss'
 
 const SideMenus = () => {
+  const [type, setType] = useState('')
+  const [showRequestSupport, setShowRequestSupport] = useState(false)
+
   return (
     <div className={classes.menus}>
         <div className={classes.menu}>
@@ -10,10 +15,11 @@ const SideMenus = () => {
             target='_blank'
             rel="noreferrer"
           >
-            <span className={classes.label}>
+            <span className={classNames(classes.label)}>
               Announcement
             </span>
             <img src='/assets/images/side-menus/announcement.svg' className={classes.icon} alt='icon'/>
+            
           </a>
         </div>
         <div className={classes.menu}>
@@ -31,7 +37,8 @@ const SideMenus = () => {
         <div className={classes.menu}>
           <a className={classes.btn}
             onClick={() => {
-              
+              setType('CUSTOMER_SUPPORT')
+              setShowRequestSupport(true)
             }}
           >
             <span className={classes.label}>
@@ -68,6 +75,11 @@ const SideMenus = () => {
             <img src='/assets/images/side-menus/spore.svg' className={classes.icon} alt='icon'/>
           </a>
         </div>
+
+        <SupportForm show={showRequestSupport}
+          handleClose={() => setShowRequestSupport(false)}
+          type={type}
+        />
       </div>
   )
 }

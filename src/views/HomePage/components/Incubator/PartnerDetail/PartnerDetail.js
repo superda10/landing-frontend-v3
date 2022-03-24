@@ -65,7 +65,7 @@ const PartnerDetail = ({ setShowDetail }) => {
           Detail <img src='/assets/images/arrow.svg' className={classes.icon} />
         </a>
         <div className={classNames('flex items-center', classes.right)}>
-          <div className={classes.item}>
+          <div className={classNames(classes.item, classes.itemSmall)}>
             <img src='/assets/images/cup.svg' className={classes.cupIcon} />
             Four-time winner of the Bluebird Award 2016
           </div>

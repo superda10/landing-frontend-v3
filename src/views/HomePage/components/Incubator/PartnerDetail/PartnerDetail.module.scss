@@ -62,7 +62,7 @@
     background: #333333;
     border-radius: 10px;
     transform: matrix(1, 0, 0, 1, 0, 0);
-    max-width: 320px;
+    max-width: 299px;
     padding: 11px 20px;
     font-weight: 400;
     font-size: 14px;
@@ -75,6 +75,10 @@
       width: 24px;
       margin-right: 15px;
     }
+  }
+
+  .itemSmall {
+    max-width: 240px;
   }
 
   .title {

@@ -11,7 +11,7 @@ const Incubator = ({ showDetail, setShowDetail }) => {
   
   return (
     <div className={classes.container}>
-      <h2 className='title text-center mb-20'>
+      <h2 className='title text-center mb-10'>
         Spores Incubator
       </h2>
       <p className={classes.description}>

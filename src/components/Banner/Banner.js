@@ -9,7 +9,7 @@ const Banner = () => {
     <div className={classes.container}>
       <div className={classes.videoWrapper}>
           <ReactPlayer
-            url="/assets/images/video.mp4"
+            url="https://republique-assets-storage.s3.ap-southeast-1.amazonaws.com/video.mp4"
             className={classes.reactPlayer}
             playing={true}
             width="100%"
@@ -36,12 +36,12 @@ const Banner = () => {
           <img src='/assets/images/apply-to-launch.svg' className={classes.btnIcon} />
           Apply To Launch
         </a>
-        <a className='btn btn-black mx-8'
+        <a className={classNames('btn btn-black mx-8', classes.btn)}
           href='https://spores-network.gitbook.io/spores-network-white-paper-2.0/'
           target='_blank'
           rel="noreferrer"
         >
-          <img src='/assets/images/whitepaper.svg' className={classes.btnIcon} />
+          <div className={classes.whitepapger} />
           Whitepaper
         </a>
       </div>

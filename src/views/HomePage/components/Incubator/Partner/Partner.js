@@ -18,7 +18,7 @@ const Partner = ({ showDetail, setShowDetail }) => {
             window.open('https://www.crosgames.com/')
           }}
       >
-        <img src='/assets/images/globe-black.svg' className={classes.icon} />
+        <div className={classes.icon}></div>
         https://www.crosgames.com/
       </a>
       }

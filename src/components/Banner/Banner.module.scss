@@ -30,6 +30,24 @@
     margin-right: 8px;
   }
 
+  .btn {
+    .whitepapger {
+      width: 13px;
+      height: 15px;
+      margin-right: 8px;
+      background-color: #ffffff;
+      -webkit-mask: url('/assets/images/whitepaper.svg') no-repeat center;
+      mask: url('/assets/images/whitepaper.svg') no-repeat center;
+    }
+    &:hover {
+      .whitepapger {
+        background-color: #3C3C3E;
+      }
+    }
+  }
+
+  
+
   @media (max-width: 767px) {
     padding: 0 20px;
     .content {

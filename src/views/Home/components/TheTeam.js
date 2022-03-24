@@ -107,7 +107,7 @@ const TheTeam = () => {
                   <img src={item.image} className='team-avatar'/>
                   <div className='font-bold text-lg mt-4 text-white text-uppercase'>{item.name}</div>
                   <div className='font-normal mb-4 text-white size-xs text-uppercase'>{item.position}</div>
-                  <div className='space-x-4 mb-4 mh40'>
+                  <div className='space-x-4 mb-4'>
                     {item.Twitter && (
                       <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
                         <Twitter color='white'/>
@@ -175,7 +175,7 @@ const TheTeam = () => {
                   <img src={item.image} className='team-avatar'/>
                   <div className='font-bold text-lg mt-4 text-white text-uppercase'>{item.name}</div>
                   <div className='font-normal mb-4 text-white size-xs text-uppercase'>{item.position}</div>
-                  <div className='space-x-4 mb-4 mh40'>
+                  <div className='space-x-4 mb-4'>
                     {item.Twitter && (
                       <IconButton component={Link} href={item.Twitter} className='bg-primary-main'>
                         <Twitter color='white'/>

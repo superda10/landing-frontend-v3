@@ -30,7 +30,11 @@
   }
   .icon {
     margin-left: 8px;
-    width: 11px;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    -webkit-mask: url('/assets/images/globe-black.svg') no-repeat center;
+    mask: url('/assets/images/globe-black.svg') no-repeat center;
   }
 
   .link {
@@ -40,6 +44,14 @@
       width: 14px;
       margin-right: 6px;
       margin-left: 0;
+      margin-top: 2px;
+    }
+
+    &:hover {
+      .icon {
+        background-color: #E09708;
+      }
+      color: #E09708 !important;
     }
   }
 

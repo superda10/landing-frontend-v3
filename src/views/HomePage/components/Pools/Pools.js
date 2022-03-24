@@ -125,7 +125,13 @@ const Pools = () => {
         />
       </div>
       <div className={classes.pools}>
-        <SliderComponent data={pools}
+        { pools.map((item) => (
+            <div key={item.id} className={classes.pool}>
+              <PoolItem item={item}/>
+            </div>
+            
+          )) }
+        {/* <SliderComponent data={pools}
           slidesToScroll={pools.length >= 3 ? 3 : pools.length}
           slidesToShow={pools.length >= 3 ? 3 : pools.length}
         >
@@ -135,7 +141,7 @@ const Pools = () => {
             </div>
             
           )) }
-        </SliderComponent>
+        </SliderComponent> */}
       </div>
       
     </div>

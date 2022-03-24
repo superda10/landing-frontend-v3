@@ -1,6 +1,5 @@
 import React from 'react'
 import classes from './Team.module.scss'
-import { Container } from '@mui/material'
 import { TheTeam } from 'views/Home/components'
 
 const Team = () => {
