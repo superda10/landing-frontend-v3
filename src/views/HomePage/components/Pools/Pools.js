@@ -22,7 +22,7 @@ const poolsUpcoming = [{
   totalRaise: '$80,000',
   start: '27 March 2022 2:00',
   end: '26 March 2022 16:00 (UTC)',
-  price: '1 ANML = $0.0.0045',
+  price: '1 ANML = $0.0045',
   registrationEnd: '22 hours, 5 minutes',
   percent: '0%',
   current: '0',
