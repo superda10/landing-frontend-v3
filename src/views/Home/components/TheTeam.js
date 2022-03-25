@@ -85,14 +85,14 @@ const TheTeam = () => {
                 LinkedIn: 'https://www.linkedin.com/in/allen-v-dam-66b7bb1',
                 description: 'Over 20 years of experiences in Hollywood Film Industry\nExecutive Producer of Expendable 4, Rambo 5 featuring Sylvester Stallone, Lamborghini the Legend featuring Alec Baldwin and Antonio Banderas and Bull Brothers\nA Hollywood executive with film credits on Fast & Furious 6 and Tokyo Drift, Trainspotting, Notorious and Wonder\nMajored in Visual Environmental Studies at Harvard'
               },
-              {
-                name: 'RUBY NGUYEN',
-                image: require('assets/images/teams/Ruby_Nguyen.png').default.src,
-                position: 'Chief Operations Officer',
-                Twitter: 'https://twitter.com/zubi_on_rail',
-                LinkedIn: 'https://www.linkedin.com/in/runguyen',
-                description: 'COO at Spores Network\n8+ years of experience in building new ventures, technology investment, sales, and operations\nFormer Founding Member at One Mount, a corporate venture builder with over $100M in investment\nFormer SEA Regional Lead, Partner Management at Facebook\nMBA, University of Chicago Booth School of Business'
-              },
+              // {
+              //   name: 'RUBY NGUYEN',
+              //   image: require('assets/images/teams/Ruby_Nguyen.png').default.src,
+              //   position: 'Chief Operations Officer',
+              //   Twitter: 'https://twitter.com/zubi_on_rail',
+              //   LinkedIn: 'https://www.linkedin.com/in/runguyen',
+              //   description: 'COO at Spores Network\n8+ years of experience in building new ventures, technology investment, sales, and operations\nFormer Founding Member at One Mount, a corporate venture builder with over $100M in investment\nFormer SEA Regional Lead, Partner Management at Facebook\nMBA, University of Chicago Booth School of Business'
+              // },
               {
                 name: 'Phung Minh',
                 image: require('assets/images/teams/phung-minh.png').default.src,
@@ -102,7 +102,7 @@ const TheTeam = () => {
                 description: 'Engineering Director at Spores\n\nAn e-commerce expert with 17+ years of experience across multiple fields and start-ups.An passionate advocate for blockchain and its applications.'
               }
             ].map((item, index) => (
-              <Grid item key={index} xs={12} sm={8} md={4} xl={3}>
+              <Grid item key={index} xs={12} sm={8} md={4} xl={4}>
                 <div className={classNames('flex flex-col items-center team py-6 px-4 h-full team-item-h relative', showAllCXOTeamInfo && 'team-item-h-full')}>
                   <img src={item.image} className='team-avatar'/>
                   <div className='font-bold text-lg mt-4 text-white text-uppercase'>{item.name}</div>
