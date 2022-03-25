@@ -45,7 +45,11 @@ const PoolItem = ({item}) => {
         </div>
       </div>
 
+      
+
       <div className={classes.content}>
+      { item.poolStatus === 'ENDED'
+        && <>
         <div className='flex items-center justify-between'>
           { item.poolStatus === 'ENDED'
             ? <p className={classes.text}>
@@ -75,6 +79,8 @@ const PoolItem = ({item}) => {
             {item.current} / {item.totalRaise}
           </p>
         </div>
+        </>
+      }
 
         <div className='flex items-center justify-between'>
           <a className='btn btn-main btn-small'

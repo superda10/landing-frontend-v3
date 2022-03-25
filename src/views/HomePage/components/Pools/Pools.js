@@ -7,10 +7,12 @@ import PoolItem from '../PoolItem'
 const TABS = [{
   label: 'Upcoming',
   value: 'UPCOMING'
-}, {
-  label: 'Live',
-  value: 'LIVE'
-}, {
+},
+// {
+//   label: 'Live',
+//   value: 'LIVE'
+// },
+{
   label: 'Ended',
   value: 'ENDED'
 }]
