@@ -13,21 +13,21 @@ const GetSPO = () => {
         target='_blank'
         rel="noreferrer"
       >
-        <img src='/assets/images/getspo/uniswap.png' className={classes.uniswap}/>
+        <img src='/assets/images/getspo/uniswap2.png' className={classes.uniswap}/>
       </a>
       <a className={classNames(classes.btn)}
         href='https://pancakeswap.finance/swap?outputCurrency=0x8357c604c5533fa0053BeAaA1494Da552ceA38f7'
         target='_blank'
         rel="noreferrer"
       >
-        <img src='/assets/images/getspo/pancakeswap.png' className={classes.pancakeswap} />
+        <img src='/assets/images/getspo/pancakeswap2.png' className={classes.pancakeswap} />
       </a>
       <a className={classNames(classes.btn)}
         href='https://www.gate.io/trade/SPO_USDT'
         target='_blank'
         rel="noreferrer"
       >
-        <img src='/assets/images/getspo/gateio.png' className={classes.gateio} />
+        <img src='/assets/images/getspo/gateio2.png' className={classes.gateio} />
       </a>
       <div className={classes.links}>
         <a className={classes.link}
