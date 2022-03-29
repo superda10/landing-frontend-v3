@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import moment from 'moment'
 import classes from './PoolItem.module.scss'
 
 const PoolItem = ({item}) => {
@@ -7,13 +8,16 @@ const PoolItem = ({item}) => {
     <div className={classes.container}>
       <div className={classNames(classes.content, classes.bb1)}>
         <div className='flex items-center mb-12'>
-          <img src={item.logo} className={classNames(classes.logo, item.logoClass)} alt='logo'/>
+          <div className='flex items-center justify-center' style={{height: '70px'}}>
+            <img src={item.logo} className={classNames(classes.logo, item.logoClass)} alt='logo'/>
+          </div>
+          
           <div className='flex-1'>
             <h4 className={classes.name}>
-              {item.poolName}
+              {item.name}
             </h4>
             <p className={classes.text}>
-              {item.type}
+              {item.symbol}
             </p>
           </div>
         </div>
@@ -31,8 +35,8 @@ const PoolItem = ({item}) => {
             Start/End
           </p>
           <p className={classes.textRight}>
-            {item.start} <br />
-            {item.end}
+            {moment(item.startDate, 'MM/DD/YYYY HH:mm').format('DD MMMM YYYY HH:mm')} <br />
+            {moment(item.endDate, 'MM/DD/YYYY HH:mm').format('DD MMMM YYYY HH:mm')} UTC
           </p>
         </div>
         <div className='flex mb-2 items-end justify-between'>
@@ -62,21 +66,22 @@ const PoolItem = ({item}) => {
           
 
           <p className={classes.text}>
-            {item.percent}
+            {item.progress}
           </p>
         </div>
 
         <div className={classes.progressWrapper}>
-          <div className={classes.progress} style={{width: `${item.percent}`}}/>
+          <div className={classes.progress} style={{width: `${item.progress}`}}/>
         </div>
 
         <div className='flex items-center justify-between mb-26'>
-          <p className={classes.text2}>
+          {/* <p className={classes.text2}>
             {item.currentValue}
-          </p>
+          </p> */}
+          <div />
 
           <p className={classes.text2}>
-            {item.current} / {item.totalRaise}
+            {item.currentValue} / {item.totalRaise}
           </p>
         </div>
         </>
