@@ -10,21 +10,27 @@
     margin-bottom: 0;
   }
   .btn {
+    height: 52px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 15px;
-    transition: all 0.3s;
-    padding: 0 !important;
-    &:hover {
-      // background: #C4C4C4;
-      box-shadow: 0px 0px 15px rgba(62, 72, 100, 0.05);
-    }
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgba(62, 72, 100, 0.05);
+    border-radius: 8px;
+    border: 3px solid #ffffff;
     .uniswap {
-      width: 155px;
+      width: 111px;
     }
     .pancakeswap {
-      width: 176px;
+      width: 132px;
     }
     .gateio {
-      width: 128px;
+      width: 84px;
+    }
+    &:hover {
+      border: 3px solid #ECECF5;
     }
   }
   .links {

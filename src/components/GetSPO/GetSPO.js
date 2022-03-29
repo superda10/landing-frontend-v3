@@ -8,21 +8,21 @@ const GetSPO = () => {
       <p className={classes.label}>
         Get $SPO
       </p>
-      <a className={classNames('btn btnBlack', classes.btn)}
+      <a className={classNames(classes.btn)}
         href='https://app.uniswap.org/#/swap?outputCurrency=0xcbE771323587EA16dACB6016e269D7F08A7ACC4E'
         target='_blank'
         rel="noreferrer"
       >
         <img src='/assets/images/getspo/uniswap.png' className={classes.uniswap}/>
       </a>
-      <a className={classNames('btn btnBlack', classes.btn)}
+      <a className={classNames(classes.btn)}
         href='https://pancakeswap.finance/swap?outputCurrency=0x8357c604c5533fa0053BeAaA1494Da552ceA38f7'
         target='_blank'
         rel="noreferrer"
       >
         <img src='/assets/images/getspo/pancakeswap.png' className={classes.pancakeswap} />
       </a>
-      <a className={classNames('btn btnBlack', classes.btn)}
+      <a className={classNames(classes.btn)}
         href='https://www.gate.io/trade/SPO_USDT'
         target='_blank'
         rel="noreferrer"
