@@ -55,21 +55,21 @@ const SideMenus = () => {
                 target='_blank'
                 rel="noreferrer"
               >
-                <img src='/assets/images/getspo/uniswap.svg'/>
+                <img src='/assets/images/getspo/uniswap2.png' className={classes.uniswap} />
               </a>
               <a className={classes.btnLink}
                 href='https://pancakeswap.finance/swap?outputCurrency=0x8357c604c5533fa0053BeAaA1494Da552ceA38f7'
                 target='_blank'
                 rel="noreferrer"
               >
-                <img src='/assets/images/getspo/pancakeswap.svg'/>
+                <img src='/assets/images/getspo/pancakeswap2.png' className={classes.pancakeswap}/>
               </a>
               <a className={classes.btnLink}
                 href='https://www.gate.io/trade/SPO_USDT'
                 target='_blank'
                 rel="noreferrer"
               >
-                <img src='/assets/images/getspo/gateio.svg'/>
+                <img src='/assets/images/getspo/gateio2.png' className={classes.gateio}/>
               </a>
             </div>
             <img src='/assets/images/side-menus/spore.svg' className={classes.icon} alt='icon'/>
