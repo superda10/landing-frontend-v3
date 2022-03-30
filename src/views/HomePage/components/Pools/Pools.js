@@ -51,18 +51,25 @@ const Pools = () => {
             label: 'Upcoming',
             value: 'UPCOMING'
           })
+          setCurrentTab('UPCOMING')
         }
         if (livePools.length > 0) {
           poolTabs.push({
             label: 'Live',
             value: 'LIVE'
           })
+          if (upcomingPools.length === 0) {
+            setCurrentTab('LIVE')
+          }
         }
         if (endedPools.length > 0) {
           poolTabs.push({
             label: 'Ended',
             value: 'ENDED'
           })
+          if (upcomingPools.length === 0 && livePools.length === 0) {
+            setCurrentTab('ENDED')
+          }
         }
 
         setTabs(poolTabs)
@@ -88,30 +95,31 @@ const Pools = () => {
           handleSelectTab={handleSelectTab}
         />
       </div>
-      <div className={classes.pools}>
+      
         { currentPools.length > 3
-          ? <SliderComponent data={currentPools}
-              slidesToScroll={currentPools.length >= 3 ? 3 : currentPools.length}
-              slidesToShow={currentPools.length >= 3 ? 3 : currentPools.length}
-            >
-              { currentPools.map((item) => (
-                <div key={item.id} className={classes.pool}>
-                  <PoolItem item={item}/>
-                </div>
-                
-              )) }
-            </SliderComponent>
-            : <>
+          ? <div className={classes.pollSlide}>
+            <SliderComponent data={currentPools}
+                slidesToScroll={currentPools.length >= 3 ? 3 : currentPools.length}
+                slidesToShow={currentPools.length >= 3 ? 3 : currentPools.length}
+              >
+                { currentPools.map((item) => (
+                  <div key={item.id} className={classes.pool}>
+                    <PoolItem item={item}/>
+                  </div>
+                  
+                )) }
+              </SliderComponent>
+            </div>
+            :
+            <div className={classes.pools}>
             { currentPools.map((item) => (
               <div key={item.id} className={classes.pool}>
                 <PoolItem item={item}/>
               </div>
               
             )) }
-          </>
+            </div>
         }
-        
-      </div>
       
     </div>
   )
