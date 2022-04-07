@@ -19,6 +19,8 @@ const Banner = () => {
             loop={true}
             muted={true}
             autoPlay={true}
+            playsinline={true}
+            playsInline={true}
           />
         </div>
       {/* <img src='/assets/images/large-logo.png' className={classes.largeLogo} alt='logo'/> */}

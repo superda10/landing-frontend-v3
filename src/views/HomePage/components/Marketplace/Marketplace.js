@@ -104,6 +104,8 @@ const Marketplace = () => {
             loop={true}
             muted={true}
             autoPlay={true}
+            playsinline={true}
+            playsInline={true}
           />
         </div>
           { VR_IMAGES.map((item, i) => (
