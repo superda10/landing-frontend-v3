@@ -4,7 +4,7 @@
     margin: 0 10px;
     a {
       &:hover {
-        .facebook, .twitter, .instagram, .discord, .telegram, .linkedin {
+        .medium, .facebook, .twitter, .instagram, .discord, .telegram, .linkedin {
           background-color: #87878D;
         }
       }
@@ -17,6 +17,14 @@
   border-bottom: 1px solid #D5D5DC;
   padding: 80px 20px;
 
+  .medium {
+    width: 24px;
+    height: 20px;
+    background-color: #3C3C3E;
+    -webkit-mask: url('/assets/images/socials/medium2.svg') no-repeat center;
+    mask: url('/assets/images/socials/medium2.svg') no-repeat center;
+    transition: all 0.3s;
+  }
   .facebook {
     width: 20px;
     height: 20px;

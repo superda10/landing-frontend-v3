@@ -22,7 +22,8 @@
     bottom: 140px;
   }
   .getspo {
-    margin-top: 16px;
+    margin-top: 18px;
+    margin-bottom: 10px;
   }
 
   .btnIcon {
@@ -30,15 +31,13 @@
     margin-right: 8px;
   }
 
+  .btnMini {
+    height:30px;
+    font-size: 11px;
+    border-radius: 4px!important;
+  }
+
   .btn {
-    .whitepapger {
-      width: 13px;
-      height: 15px;
-      margin-right: 8px;
-      background-color: #ffffff;
-      -webkit-mask: url('/assets/images/whitepaper.svg') no-repeat center;
-      mask: url('/assets/images/whitepaper.svg') no-repeat center;
-    }
     &:hover {
       .whitepapger {
         background-color: #3C3C3E;

@@ -56,3 +56,16 @@
     left: 10px;
   }
 }
+
+.btnIcon {
+  &:hover .icon {
+    background-color: #3c3c3e;
+  }
+  .icon {
+    mask-image: url(/assets/images/go-to-launchpad-white.svg);
+    background-color: #fff;
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+  }
+}
