@@ -2,7 +2,22 @@
   max-width: 1200px;
   width: 100%;
   margin: 50px auto 100px auto;
-  .banner { 
+  .banner {
     margin-bottom: 50px;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .card {
+    display: flex;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    width: fit-content;
   }
 }

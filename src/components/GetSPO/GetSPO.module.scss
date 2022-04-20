@@ -1,5 +1,5 @@
 .container {
-  .webList{
+  .webList {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
-    color: #3C3C3E;
+    color: #3c3c3e;
     margin-bottom: 0;
   }
   .btn {
@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50px;
     .uniswap {
       width: 111px;
     }
@@ -24,6 +25,9 @@
     }
     .gateio {
       width: 84px;
+    }
+    &:hover {
+      background: #e6e6ec;
     }
   }
   .links {
@@ -38,7 +42,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #87878D;
+    color: #87878d;
     cursor: pointer;
     &:first-child {
       margin-bottom: 6px;
@@ -54,12 +58,12 @@
     .link {
       margin-bottom: 10px;
     }
-    .links{
+    .links {
       flex-direction: column;
       align-items: center;
-      gap:0px;
+      gap: 0px;
     }
-    .webList{
+    .webList {
       flex-direction: column;
     }
   }

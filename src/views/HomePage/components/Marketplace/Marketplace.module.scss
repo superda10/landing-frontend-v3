@@ -13,16 +13,35 @@
     margin-bottom: 26px;
   }
 
-  .icon {
-    width: 20px;
-    margin-right: 8px;
+  .btnIcon {
+    &:hover .icon {
+      background-color: #3c3c3e;
+    }
+    .icon {
+      background-color: #fff;
+      margin-right: 8px;
+    }
+    .market {
+      mask-image: url(/assets/images/marketplace.svg);
+      width: 17px;
+      height: 17px;
+    }
+    .game {
+      mask-image: url(/assets/images/game.svg);
+      width: 20px;
+      height: 15px;
+    }
+    .gallery {
+      mask-image: url(/assets/images/galery.svg);
+      width: 19px;
+      height: 20px;
+    }
   }
 
   .title {
     max-width: 680px;
     margin: 0 auto;
   }
-
 
   .img {
     width: 100%;
@@ -40,7 +59,7 @@
   }
   .imageVr {
     width: 100%;
-    height: 514px;
+    height: auto;
     object-fit: cover;
     border-radius: 8px !important;
     @media (min-width: 1920px) {
@@ -52,15 +71,7 @@
       height: auto;
     }
   }
-  .imageWrapper {
-    width: 100%;
-    height: 700px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: block;
-  }
-  
+
   .arrow {
     position: absolute;
     z-index: 10;
@@ -79,7 +90,7 @@
       width: 8px;
     }
   }
-  
+
   .nextArrow {
     right: -50px;
     img {
@@ -89,20 +100,11 @@
       right: 10px;
     }
   }
-  
+
   .prevArrow {
     left: -50px;
     @media (max-width: 767px) {
       left: 10px;
-    }
-  }
- 
-  .videoWrapper {
-    height: 514px;
-    border-radius: 8px !important;
-    overflow: hidden;
-    @media (max-width: 767px) {
-      height: auto;
     }
   }
 

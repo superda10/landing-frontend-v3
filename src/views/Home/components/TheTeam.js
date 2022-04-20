@@ -236,6 +236,7 @@ const TheTeam = () => {
             { name: '11_Token_Suite.png', width: 91 },
             { name: '12_Lupa_Capital.svg', width: 184 },
             { name: '13_Maven_Capital.png', width: 137 },
+            { name: '14_Spark_Point.svg', width: 141 },
           ].map((item, index) => (
             <Grid item key={index} xs={6} md={3} lg={2} className='flex justify-center items-center'>
               <img src={require(`assets/images/partners/${item.name}`).default.src} style={{ width: item.width }} />
