@@ -47,6 +47,9 @@
     &:first-child {
       margin-bottom: 6px;
     }
+    &:hover {
+      color: #3c3c3e;
+    }
   }
 
   @media (max-width: 767px) {
