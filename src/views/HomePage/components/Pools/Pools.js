@@ -2,13 +2,11 @@ import React, { useState, useMemo } from 'react'
 import classes from './Pools.module.scss'
 import Tabs from '../Tabs'
 import SliderComponent from 'views/Home/components/SliderComponent'
-import * as Api from '../../../../api/api'
 import PoolItem from '../PoolItem'
 
 
-const Pools = () => {
+const Pools = ({pools={}}) => {
   const [currentTab, setCurrentTab] = useState('UPCOMING')
-  const [pools, setPools] = useState({})
   const [tabs, setTabs] = useState([])
 
   const handleSelectTab = (tab) => {
@@ -16,72 +14,37 @@ const Pools = () => {
 
   }
 
-  useState(() => {
-    const getPools = async () => {
-      try {
-        const result = await Api.get({
-          url: '/pool/public/list'
-        })
-        const upcomingPools = []
-        const livePools = []
-        const endedPools = []
+  React.useEffect(() => {
+    const poolTabs = []
 
-        result.data.forEach((pool) => {
-          if (pool.poolStatus === 'UPCOMING') {
-            upcomingPools.push(pool)
-          }
-          if (pool.poolStatus === 'LIVE') {
-            livePools.push(pool)
-          }
-          if (pool.poolStatus === 'ENDED') {
-            endedPools.push(pool)
-          }
-        })
-
-        setPools({
-          UPCOMING: upcomingPools,
-          LIVE: livePools,
-          ENDED: endedPools
-        })
-
-        const poolTabs = []
-
-        if (upcomingPools.length > 0) {
-          poolTabs.push({
-            label: 'Upcoming',
-            value: 'UPCOMING'
-          })
-          setCurrentTab('UPCOMING')
-        }
-        if (livePools.length > 0) {
-          poolTabs.push({
-            label: 'Live',
-            value: 'LIVE'
-          })
-          if (upcomingPools.length === 0) {
-            setCurrentTab('LIVE')
-          }
-        }
-        if (endedPools.length > 0) {
-          poolTabs.push({
-            label: 'Ended',
-            value: 'ENDED'
-          })
-          if (upcomingPools.length === 0 && livePools.length === 0) {
-            setCurrentTab('ENDED')
-          }
-        }
-
-        setTabs(poolTabs)
-
-
-      } catch(e) {
-        console.log(e)
+    if (pools.UPCOMING?.length > 0) {
+      poolTabs.push({
+        label: 'Upcoming',
+        value: 'UPCOMING'
+      })
+      setCurrentTab('UPCOMING')
+    }
+    if (pools.LIVE?.length > 0) {
+      poolTabs.push({
+        label: 'Live',
+        value: 'LIVE'
+      })
+      if (pools.UPCOMING?.length === 0) {
+        setCurrentTab('LIVE')
+      }
+    }
+    if (pools.ENDED?.length > 0) {
+      poolTabs.push({
+        label: 'Ended',
+        value: 'ENDED'
+      })
+      if (pools.UPCOMING?.length === 0 && pools.LIVE?.length === 0) {
+        setCurrentTab('ENDED')
       }
     }
 
-    getPools()
-  }, [])
+    setTabs(poolTabs)
+  }, [pools.ENDED?.length, pools.LIVE?.length, pools.UPCOMING?.length])
 
   const currentPools = useMemo(() => {
     return pools[currentTab] || []
