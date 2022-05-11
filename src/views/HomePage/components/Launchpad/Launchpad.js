@@ -11,11 +11,11 @@ const settings = {
   className: 'slider variable-width',
   dots: false,
   infinite: true,
-  speed: 500,
+  speed: 2500,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 0,
   arrows: false,
   variableWidth: true,
 };
@@ -46,12 +46,12 @@ const Launchpad = () => {
         })
 
         setPools({
-          all:result.data,
+          all: result.data,
           UPCOMING: upcomingPools,
           LIVE: livePools,
           ENDED: endedPools
         })
-      } catch(e) {
+      } catch (e) {
         console.log(e)
       }
     }
@@ -63,24 +63,25 @@ const Launchpad = () => {
     <div className={classes.container}>
       <div className={classes.list}>
         <Slider {...settings}>
-          {pools.all?.map((item, index) => (
+          {pools.all?.filter((pool => !!pool.multipleTimes && pool.multipleTimes !== '0'))?.map((item, index) => (
             <div key={index}>
               <div className={classes.card}>
                 <div className='flex justify-center items-center' style={{ height: 45, width: 45 }}><img src={item.logo} /></div>
                 <div>
                   <div className='font-bold'>{item.name}</div>
-                  <div className='text-sm'>{item.multipleTimes??1}x</div>
+                  <div className='text-sm'>{item.multipleTimes ?? 1}x</div>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
+      
       <div className={classes.banner}>
         <Banners />
       </div>
 
-      <Pools pools={pools}/>
+      <Pools pools={pools} />
 
       <LaunchpadTierSystem />
 
