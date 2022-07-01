@@ -25,7 +25,7 @@ const About = () => {
                     </div>
                     <div className={classes.content}>
                         <div className={classes.row}>
-                            <span className={classes.title}>GameFi Studio</span>
+                            <span className={classes.title}>Metaverse</span>
                             <img src={'/assets/images/goggles.svg'} alt='icon' className={classes.icon} />  
                         </div>
                     </div>
