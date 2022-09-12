@@ -13,6 +13,9 @@ const LaunchpadTierSystemItem = ({ data }) =>{
                     <td className={classNames(classes.label, classes.background)}>VIP III</td>
                     <td className={classNames(classes.label, classes.background)}>VIP IV</td>
                     <td className={classNames(classes.label, classes.background)}>VIP V</td>
+                    <td className={classNames(classes.label, classes.background)}>VIP VI</td>
+                    <td className={classNames(classes.label, classes.background)}>VIP VII</td>
+                    <td className={classNames(classes.label, classes.background)}>VIP VIII</td>
                 </tr>
                 {data.map((item,key) => (
                         <tr key={key}>
@@ -22,6 +25,9 @@ const LaunchpadTierSystemItem = ({ data }) =>{
                             <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip3}</td>
                             <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip4}</td>
                             <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip5}</td>
+                            <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip6}</td>
+                            <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip7}</td>
+                            <td className={classNames(classes.title, item.status === true && classes.bgr)}>{item.vip8}</td>
                         </tr>
                 ))}
                 </table>
