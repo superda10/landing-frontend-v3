@@ -107,13 +107,13 @@ const Launchpad = () => {
           <script src='https://cryptorank.io/widget/marquee.js'></script>
         </div>
         <div className='text-sm flex gap-1.5 items-center justify-center' style={{ color: '#B1B5C3' }}>
-          POWER BY
+          POWERED BY
           <a
             href='https://cryptorank.io/?utm_source=Spores&utm_medium=cpc&utm_campaign=spores-launchpad'
             rel='noreferrer'
             target='_blank'
           >
-            <img src={require('assets/images/cryptorank-logo.svg').default.src} className='h-4'/>
+            <img src={require('assets/images/cryptorank-logo.svg').default.src} className='h-4' />
           </a>
         </div>
       </div>
