@@ -1,48 +1,77 @@
-import React, { useState } from 'react'
-import { ToastContainer } from 'react-toastify'
-import classes from './HomePage.module.scss'
-import Launchpad from './components/Launchpad'
-import Marketplace from './components/Marketplace'
-import PartnerWithUs from './components/PartnerWithUs'
-import Menus from './components/Menus'
-
-const TABS = [{
-  label: 'Launchpad',
-  value: 'LAUNCHPAD'
-}, {
-  label: 'Marketplace',
-  value: 'MARKETPLACE'
-}, {
-  label: 'Partner with Us',
-  value: 'PARTNER_WITH_US'
-}]
+import React from 'react';
+import Banner from 'components/Banner';
+import * as Api from '../../api/api';
+import Ecosystem from './components/Ecosystem';
+import SporesLaunchpad from './components/SporesLaunchpad';
+import JoinGuide from './components/JoinGuide';
+import OurPartners from './components/OurPartners';
+import Team from './components/Team';
+import Contact from './components/Contact';
 
 const HomePage = () => {
-  const [currentTab, setCurrentTab] = useState('LAUNCHPAD')
+  const [pools, setPools] = React.useState({});
+
+  React.useEffect(() => {
+    const getPools = async () => {
+      try {
+        const result = await Api.get({
+          url: '/pool/public/list',
+        });
+        const upcomingPools = [];
+        const livePools = [];
+        const endedPools = [];
+
+        result.data.forEach((pool) => {
+          if (pool.poolStatus === 'UPCOMING') {
+            upcomingPools.push(pool);
+          }
+          if (pool.poolStatus === 'LIVE') {
+            livePools.push(pool);
+          }
+          if (pool.poolStatus === 'ENDED') {
+            endedPools.push(pool);
+          }
+        });
+
+        setPools({
+          all: result.data,
+          UPCOMING: upcomingPools,
+          LIVE: livePools,
+          ENDED: endedPools,
+        });
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    getPools();
+  }, []);
 
   return (
-    <div className={classes.contaniner}>
-      <Menus currentTab={currentTab}
-        handleSelectTab={setCurrentTab}
-        tabs={TABS}
-      />
-
-      { currentTab === 'LAUNCHPAD'
-        && <Launchpad />
-      }
-      
-      { currentTab === 'MARKETPLACE'
-        && <Marketplace />
-      }
-      
-      { currentTab === 'PARTNER_WITH_US'
-        && <PartnerWithUs />
-      }
-
-      <ToastContainer />
-      
+    <div className=''>
+      <div>
+        <Banner pools={pools} />
+      </div>
+      <div>
+        <Ecosystem />
+      </div>
+      <div>
+        <SporesLaunchpad />
+      </div>
+      <div>
+        <JoinGuide />
+      </div>
+      <div>
+        <OurPartners />
+      </div>
+      <div>
+        <Team />
+      </div>
+      <div>
+        <Contact />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

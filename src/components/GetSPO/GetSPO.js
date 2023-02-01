@@ -1,54 +1,46 @@
-import React from 'react';
-import classNames from 'classnames';
-import classes from './GetSPO.module.scss';
+import React, { useCallback, useRef, useState } from 'react';
+import { getSPOList, shorten } from 'utils/utils';
+import { HoverLogo } from 'components/Common';
+import Copiable from 'components/Copiable';
 
 const GetSPO = () => {
+  const [hoverItem, setHoverItem] = useState(null);
+  const timerRef = useRef(null);
+
+  const handleLeave = useCallback(() => {
+    setHoverItem(null);
+  }, []);
+
   return (
-    <div className={classes.container}>
-      <div className={classes.webList}>
-        <p className={classes.label}>Get $SPO:</p>
-        <a
-          className={classNames(classes.btn)}
-          href='https://app.uniswap.org/#/swap?outputCurrency=0xcbE771323587EA16dACB6016e269D7F08A7ACC4E'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img src='/assets/images/getspo/uniswap-label.svg' className={classes.uniswap} />
-        </a>
-        <a
-          className={classNames(classes.btn)}
-          href='https://pancakeswap.finance/swap?outputCurrency=0x8357c604c5533fa0053BeAaA1494Da552ceA38f7'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img src='/assets/images/getspo/pancakeswap-label.svg' className={classes.pancakeswap} />
-        </a>
-        <a
-          className={classNames(classes.btn)}
-          href='https://www.gate.io/trade/SPO_USDT'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <img src='/assets/images/getspo/gateio-label.svg' className={classes.gateio} />
-        </a>
+    <div>
+      <div className='flex gap-4 justify-center mb-2'>
+        {getSPOList.map((item, index) => (
+          <div
+            key={index}
+            onMouseOver={() => {
+              clearTimeout(timerRef.current);
+              setHoverItem(item);
+            }}
+            onMouseLeave={() => {
+              timerRef.current = setTimeout(handleLeave, 400);
+            }}
+            onClick={() => window.open(item.url, '_blank')}
+          >
+            <HoverLogo image={item.image} isButton />
+          </div>
+        ))}
       </div>
-      <div className={classes.links}>
-        <a
-          className={classes.link}
-          href='https://etherscan.io/token/0xcbE771323587EA16dACB6016e269D7F08A7ACC4E'
-          target='_blank'
-          rel='noreferrer'
-        >
-          ETH Contract: 0xcbE7713235...F08A7ACC4E
-        </a>
-        <a
-          className={classes.link}
-          href='https://bscscan.com/token/0x8357c604c5533fa0053beaaa1494da552cea38f7'
-          target='_blank'
-          rel='noreferrer'
-        >
-          BSC Contract: 0x8357c604c5...552cea38f7
-        </a>
+      <div
+        className='text-[#667085] h-[20px] text-sm flex w-full justify-center gap-1'
+        onMouseOver={() => clearTimeout(timerRef.current)}
+        onMouseLeave={handleLeave}
+      >
+        {hoverItem && (
+          <>
+            <div>{hoverItem?.contractName}:</div>
+            <Copiable text={shorten(hoverItem?.contractAdd)} textCopy={hoverItem?.contractAdd} />
+          </>
+        )}
       </div>
     </div>
   );

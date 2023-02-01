@@ -1,9 +1,6 @@
 import Header from 'components/Header';
-import classes from './PublicLayout.module.scss'
-import ContactUs from 'components/ContactUs';
+import classes from './PublicLayout.module.scss';
 import Footer from 'components/Footer';
-import Banner from 'components/Banner';
-import SideMenus from './SideMenus/SideMenus';
 
 const PublicLayout = ({ children }) => {
   return (
@@ -11,21 +8,16 @@ const PublicLayout = ({ children }) => {
       <div className={classes.header}>
         <Header />
       </div>
-      <div className={classes.banner}>
-        <Banner />
-      </div>
-      <div className={classes.content}>
-        {children}
-      </div>
-
-      <div className={classes.contactUs}>
+      
+      <div>{children}</div>
+      {/* <div>
         <ContactUs />
-      </div>
-      <div className={classes.footer}>
+      </div> */}
+
+      <div>
         <Footer />
       </div>
-
-      <SideMenus />
+      {/* <SideMenus /> */}
     </div>
   );
 };
