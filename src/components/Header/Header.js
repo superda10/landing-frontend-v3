@@ -4,6 +4,7 @@ import { Button, Menu, MenuItem, styled } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
 import { useAnchor } from 'hooks';
 import { DarkButton } from 'components/Common';
+import { useRouter } from 'next/router';
 
 const CustomMenuItem = styled(MenuItem)`
   font-weight: 500;
@@ -102,6 +103,7 @@ const dropDownSetting = {
 };
 
 const Header = () => {
+  const router = useRouter();
   const [anchorElProduct, openProduct, onOpenProduct, onCloseProduct] = useAnchor();
   const [anchorElAbout, openAbout, onOpenAbout, onCloseAbout] = useAnchor();
   const [anchorElOurServices, openOurServices, onOpenOurServices, onCloseOurServices] = useAnchor();
@@ -109,8 +111,9 @@ const Header = () => {
   const menuList = useMemo(
     () => [
       { title: 'PRODUCT', url: null, handleClick: onOpenProduct },
-      { title: 'NEWS', url: 'a', handleClick: null },
-      { title: 'STAKING', url: 'a', handleClick: null },
+      { title: 'NEWS', url: '/', handleClick: null },
+      { title: 'AIRDROP', url: '/airdrop', handleClick: null },
+      { title: 'STAKING', url: '/', handleClick: null },
       { title: 'OUR SERVICES', url: null, handleClick: onOpenOurServices },
       { title: 'ABOUT', url: null, handleClick: onOpenAbout },
     ],
@@ -135,7 +138,7 @@ const Header = () => {
               variant='text'
               className='text-base text-[#667085] hover:text-[#D9AC63] font-semibold'
               endIcon={!menu.url && <ExpandMore />}
-              onClick={menu.handleClick}
+              onClick={!menu.url ? menu.handleClick : () => router.push(menu.url)}
             >
               {menu.title}
             </Button>
