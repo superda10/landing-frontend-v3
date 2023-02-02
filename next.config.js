@@ -3,4 +3,7 @@ module.exports = {
   images: {
     domains: [],
   },
+  experimental: {
+    runtime: 'edge',
+  },
 };
