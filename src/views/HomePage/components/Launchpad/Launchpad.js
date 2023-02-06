@@ -73,7 +73,7 @@ const Launchpad = () => {
                   </div>
                   <div>
                     <div className='font-bold'>{item.name}</div>
-                    <div className='text-sm'>{item.multipleTimes ?? 1}x</div>
+                    <div className='text-sm'>{item.multipleTimes ? item.multipleTimes : 1}x</div>
                   </div>
                 </div>
               </div>

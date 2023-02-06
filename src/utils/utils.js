@@ -58,7 +58,7 @@ export const customizeCampaignData = (data) => {
     )?.start_time;
     let realStatus = item?.status;
     if (realStatus === 2) {
-      if (DateTime.fromISO(startTime ?? 0) < DateTime.now()) {
+      if (DateTime.fromISO(startTime ? startTime : 0) < DateTime.now()) {
         realStatus = 2;
       } else {
         realStatus = 1;

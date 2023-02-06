@@ -140,13 +140,13 @@ const SporesLaunchpad = () => {
                           title='Total raise'
                           value={
                             <div className='text-[#D9AC63] font-semibold'>{`$${Number(
-                              item?.total_raise ?? 0,
+                              item?.total_raise ? item?.total_raise : 0,
                             ).toLocaleString()}`}</div>
                           }
                         />
                         <InfoLine
                           title='Price'
-                          value={<div>{`$${Number(item?.token_price ?? 0).toLocaleString()}`}</div>}
+                          value={<div>{`$${Number(item?.token_price ? item?.token_price : 0).toLocaleString()}`}</div>}
                         />
                         <InfoLine
                           title='Currency'

@@ -62,7 +62,7 @@ const AirDrop = () => {
         </div>
         <div className='flex flex-col gap-20'>
           {statusList.map((row, index) => {
-            const list = airdrops?.filter((item) => item?.status === row.code) ?? [];
+            const list = airdrops?.filter((item) => item?.status === row.code);
 
             return list.length > 0 ? (
               <div key={index} className='flex flex-col gap-6'>
@@ -83,8 +83,8 @@ const AirDrop = () => {
                       <CustomBox>
                         <Title text='Duration' />
                         <div>
-                          <div>{DateTime.fromISO(drop?.start ?? 0).toFormat('dd MMM - HH:mm')}</div>
-                          <div>{DateTime.fromISO(drop?.end ?? 0).toFormat('dd MMM - HH:mm')}</div>
+                          <div>{DateTime.fromISO(drop?.start ? drop?.start : 0).toFormat('dd MMM - HH:mm')}</div>
+                          <div>{DateTime.fromISO(drop?.end ? drop?.end : 0).toFormat('dd MMM - HH:mm')}</div>
                         </div>
                       </CustomBox>
                       <CustomBox>

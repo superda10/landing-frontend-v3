@@ -105,7 +105,9 @@ const Banner = ({ pools }) => {
                       </div>
                       <div className='flex flex-col gap-1'>
                         <div className='font-semibold text-[#344054]'>{item.name}</div>
-                        <div className='text-sm font-medium text-[#039855]'>{item.multipleTimes ?? 1}x</div>
+                        <div className='text-sm font-medium text-[#039855]'>
+                          {item.multipleTimes ? item.multipleTimes : 1}x
+                        </div>
                       </div>
                     </div>
                   </SwiperSlide>
