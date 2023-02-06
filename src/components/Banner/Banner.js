@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
 import classes from './Banner.module.scss';
 import GetSPO from 'components/GetSPO';
 import { DarkButton, PrimaryButton } from 'components/Common';
@@ -73,20 +72,9 @@ const Banner = ({ pools }) => {
         </a> */}
       </div>
       <div className='max-w-[1660px] relative'>
-        <ReactPlayer
-          // url='https://republique-assets-storage.s3.ap-southeast-1.amazonaws.com/video.mp4'
-          url='/assets/video/spores.mp4'
-          playing={true}
-          width='100%'
-          height='100%'
-          controls={false}
-          // light='/assets/images/video-thumb.png'
-          loop={true}
-          muted={true}
-          autoPlay={true}
-          playsinline={true}
-          playsInline={true}
-        />
+        <video autoPlay loop muted playsInline width='100%' height='100%'>
+          <source src='/assets/video/spores.mp4' type='video/mp4' />
+        </video>
         {Object.keys(pools).length !== 0 && (
           <div
             className='absolute bottom-20 max-w-[1320px] left-1/2'

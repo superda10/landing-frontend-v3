@@ -81,12 +81,12 @@ const PartnerDetail = ({ setShowDetail }) => {
           { members.map((member) => (
             <div className={classes.member} key={member.id}>
               <img src={member.avatar} className={classes.avatar} alt='avatar'/>
-              <p className={classes.name}>
+              <div className={classes.name}>
                 { member.name }
-              </p>
-              <p className={classes.position}>
+              </div>
+              <div className={classes.position}>
                 { member.position }
-              </p>
+              </div>
               <div className='flex items-center justify-center'>
                 <a href={member.linkedIn}
                   target='_blank'

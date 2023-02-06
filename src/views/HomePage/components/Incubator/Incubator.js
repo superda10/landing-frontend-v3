@@ -14,9 +14,9 @@ const Incubator = ({ showDetail, setShowDetail }) => {
       <h2 className='title text-center mb-10'>
         Spores Incubator
       </h2>
-      <p className={classes.description}>
+      <div className={classes.description}>
         <b>Spores Network</b> identifies, invests and empowers high quality, creator-centric Web2 game studios and bring them to Web3 by offering:
-      </p>
+      </div>
 
       <div className={classes.services}>
         <div className={classes.service}>

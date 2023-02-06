@@ -15,25 +15,25 @@ const PoolItem = ({ item }) => {
 
             <div className='flex-1'>
               <h4 className={classes.name}>{item.name}</h4>
-              <p className={classes.text}>{item.symbol}</p>
+              <div className={classes.text}>{item.symbol}</div>
             </div>
           </div>
         </a>
 
         <div className='flex mb-2 items-end justify-between'>
-          <p className={classes.label}>Total Raise</p>
-          <p className={classes.totalRaise}>{item.totalRaise}</p>
+          <div className={classes.label}>Total Raise</div>
+          <div className={classes.totalRaise}>{item.totalRaise}</div>
         </div>
         <div className='flex mb-2 items-start justify-between'>
-          <p className={classes.label}>Start/End</p>
-          <p className={classes.textRight}>
+          <div className={classes.label}>Start/End</div>
+          <div className={classes.textRight}>
             {moment(item.startDate, 'MM/DD/YYYY HH:mm').format('DD MMMM YYYY HH:mm')} <br />
             {moment(item.endDate, 'MM/DD/YYYY HH:mm').format('DD MMMM YYYY HH:mm')} UTC
-          </p>
+          </div>
         </div>
         <div className='flex mb-2 items-end justify-between'>
-          <p className={classes.label}>Price</p>
-          <p className={classes.text}>{item.price}</p>
+          <div className={classes.label}>Price</div>
+          <div className={classes.text}>{item.price}</div>
         </div>
       </div>
 
@@ -42,12 +42,12 @@ const PoolItem = ({ item }) => {
           <>
             <div className='flex items-center justify-between'>
               {item.poolStatus === 'ENDED' ? (
-                <p className={classes.text}>Closed</p>
+                <div className={classes.text}>Closed</div>
               ) : (
-                <p className={classes.text}>Registration ends: {item.registrationEnd}</p>
+                <div className={classes.text}>Registration ends: {item.registrationEnd}</div>
               )}
 
-              <p className={classes.text}>{item.progress}</p>
+              <div className={classes.text}>{item.progress}</div>
             </div>
 
             <div className={classes.progressWrapper}>
@@ -55,14 +55,14 @@ const PoolItem = ({ item }) => {
             </div>
 
             <div className='flex items-center justify-between mb-26'>
-              {/* <p className={classes.text2}>
+              {/* <div className={classes.text2}>
             {item.currentValue}
-          </p> */}
+          </div> */}
               <div />
 
-              <p className={classes.text2}>
+              <div className={classes.text2}>
                 {item.currentValue} / {item.totalRaise}
-              </p>
+              </div>
             </div>
           </>
         )}

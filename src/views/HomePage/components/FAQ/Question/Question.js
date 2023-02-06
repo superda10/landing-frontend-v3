@@ -12,9 +12,9 @@ const Question = ({item}) => {
         {item.question}
       </h4>
       <Expand open={showAnswer} duration={300}>
-        <p className={classes.answer}>
+        <div className={classes.answer}>
           { item.answer }
-        </p>
+        </div>
       </Expand>
     </div>
   )

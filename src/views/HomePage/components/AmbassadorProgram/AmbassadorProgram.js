@@ -8,15 +8,15 @@ const AmbassadorProgram = () => {
             <img src={'/assets/images/ambassador.png'} alt='img' className={classes.img} />
             <div className={classes.content}>
                 <h2 className={classes.heading}>Spores Ambassador Program</h2>
-                <p className={classes.text}>
+                <div className={classes.text}>
                     Our founders are embarking on a mission to create a digital ecosystem that focuses on NFT and GameFi projects while emphasizing the importance and value of creators and communities.
                     To make it happen, we need to have Spores Warriors become our right hand in brand activation and community outreaching within the crypto world.
-                </p>
+                </div>
             </div>
             <div className={classNames(classes.contentRow, classes.bg)}>
                 <div className={classes.row}>
                     <img src={'/assets/images/target.svg'} alt='icon' className={classes.icon} />
-                    <p className={classes.title}>Who we are looking for</p>
+                    <div className={classes.title}>Who we are looking for</div>
                 </div>
                 <div className={classes.rowAround}>
                     <div className={classes.content}>
@@ -51,11 +51,11 @@ const AmbassadorProgram = () => {
             <div className={classes.contentRow}>
                 <div className={classes.row}>
                     <img src={'/assets/images/businessman.svg'} alt='icon' className={classes.icon} />
-                    <p className={classes.title}>Responsibilities</p>
+                    <div className={classes.title}>Responsibilities</div>
                 </div>
                 <div className={classes.rowAround}>
                     <div className={classes.content}>
-                        <p className={classes.label}>Business Development</p>
+                        <div className={classes.label}>Business Development</div>
                         <ul className={classes.list}>
                             <li className={classes.item}>
                                 Find and onboard new potential partners on Spores Marketplace, GameStore, Launchpad
@@ -69,7 +69,7 @@ const AmbassadorProgram = () => {
                         </ul>
                     </div>
                     <div className={classes.content}>
-                    <p className={classes.label}>Partner Relations</p>
+                    <div className={classes.label}>Partner Relations</div>
                         <ul className={classes.list}>
                             <li className={classes.item}>
                                 Represent Spores at industry events, conferences, and workshops to drive conversations and create interest with potential industry players (if possible)
@@ -80,7 +80,7 @@ const AmbassadorProgram = () => {
                         </ul>
                     </div>
                     <div className={classes.content}>
-                    <p className={classes.label}>Brand Advocacy</p>
+                    <div className={classes.label}>Brand Advocacy</div>
                         <ul className={classes.list}>
                             <li className={classes.item}>
                                 Become a product expert and brand ambassador
@@ -95,7 +95,7 @@ const AmbassadorProgram = () => {
             <div className={classNames(classes.contentRow, classes.bg)}>
                 <div className={classes.row}>
                     <img src={'/assets/images/benefit.svg'} alt='icon' className={classes.icon} />
-                    <p className={classes.title}>Benefits</p>
+                    <div className={classes.title}>Benefits</div>
                 </div>
                 <div className={classes.rowAround}>
                     <div className={classes.content}>
@@ -133,39 +133,39 @@ const AmbassadorProgram = () => {
             <div className={classes.contentRow}>
                 <div className={classes.row}>
                     <img src={'/assets/images/settings.svg'} alt='icon' className={classes.icon} />
-                    <p className={classes.title}>How to participate</p>
+                    <div className={classes.title}>How to participate</div>
                 </div>
                 <div className={classes.rowAround}>
                     <div className={classes.content}>
                         <div className={classes.row}>
-                            <p className={classes.number}>1</p>
-                            <p className={classes.text}>Fill out this<br /> 
+                            <div className={classes.number}>1</div>
+                            <div className={classes.text}>Fill out this<br /> 
                                 <a>Google Form</a>
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className={classes.content}>
                         <div className={classes.row}>
-                            <p className={classes.number}>2</p>
-                            <p className={classes.text}>
+                            <div className={classes.number}>2</div>
+                            <div className={classes.text}>
                              Spores will review the application within 7 working days.
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className={classes.content}>
                         <div className={classes.row}>
-                            <p className={classes.number}>3</p>
-                            <p className={classes.text}>
+                            <div className={classes.number}>3</div>
+                            <div className={classes.text}>
                                 Interview with the Community Manager — Investor Relations
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className={classes.content}>
                         <div className={classes.row}>
-                            <p className={classes.number}>4</p>
-                            <p className={classes.text}>
+                            <div className={classes.number}>4</div>
+                            <div className={classes.text}>
                             Interview <br /> with CMO
-                            </p>
+                            </div>
                         </div>
                     </div>
                     <div className={classes.content}>

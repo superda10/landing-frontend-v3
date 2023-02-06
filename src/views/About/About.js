@@ -8,14 +8,14 @@ const About = () => {
             <div className={classes.wrapper}>
             <h2 className={classes.heading}>Spores Network Ecosystem</h2>
             <div className={classes.contentText}>
-                <p className={classes.text}>
+                <div className={classes.text}>
                     Spores Network is a GameFi and Metaverse Publisher seeking to empower Web3 experiences that 
                     integrate with culturally forward Entertainment IP and Corporate Brands
-                </p>
+                </div>
             </div>
-            <p className={classes.title}>GameFi / Metaverse Publisher</p>
+            <div className={classes.title}>GameFi / Metaverse Publisher</div>
             <div className={classes.content}>
-                <p className={classes.text}>Entertainment IP and Corporate Brands</p>
+                <div className={classes.text}>Entertainment IP and Corporate Brands</div>
                 <div className={classes.contentRow}>
                     <div className={classNames(classes.content, classes.mr)}>
                         <div className={classes.row}>
@@ -32,11 +32,11 @@ const About = () => {
                 </div>
             </div>
             <div className={classes.BoutiqueLaunchpad}>
-                <p className={classes.title}>Boutique Launchpad</p>
+                <div className={classes.title}>Boutique Launchpad</div>
                 <div className={classes.row}>
-                    <p className={classes.text}>Rug-Proof Mechanisms</p>
-                    <p className={classes.text}>Guaranteed Allocation</p>
-                    <p className={classes.text}>High-Quality Projects</p>
+                    <div className={classes.text}>Rug-Proof Mechanisms</div>
+                    <div className={classes.text}>Guaranteed Allocation</div>
+                    <div className={classes.text}>High-Quality Projects</div>
                 </div>
             </div>
             <div className={classes.content}>
@@ -86,9 +86,9 @@ const About = () => {
             </div>
             <div className={classes.ValueCreation}>
                 <div className={classes.left}>
-                    <p className={classes.title}>
+                    <div className={classes.title}>
                         Value Creation
-                    </p>
+                    </div>
                 </div>
                 <div className={classes.right}>
                     <ul>
@@ -115,9 +115,9 @@ const About = () => {
         <h2 className='title text-center mb-10'>
             Vision & Mission
         </h2>
-        <p className={classes.description}>
+        <div className={classes.description}>
             <b>Spores Network Founders</b> believe that the decentralization of ownership and burgeoning <b>metaverse will uniquely bridge our digital and physical lives</b>
-        </p>
+        </div>
         <div className={classNames('flex items-start justify-center', classes.visions)}>
             <div>
                 <div className={classes.vision}>
@@ -131,9 +131,9 @@ const About = () => {
                     Spores Metaverse ecosystem encompasses physical and digital experiences (phygital) that generate community engagement and revenue through our NFT aggregator marketplace, Republique gallery and retail experience, and cross-chain metaverses.
                 </div>
             </div>
-            <p className={classes.quoute}>
+            <div className={classes.quoute}>
                 Everything we do is from the lens of being Asian-influenced with Global Reach.
-            </p>
+            </div>
         </div>
     </div>
           

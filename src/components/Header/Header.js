@@ -127,9 +127,7 @@ const Header = () => {
     >
       <div className='flex justify-between max-w-[1320px] w-full'>
         <Link href='/'>
-          <a>
-            <img src='/assets/logos/logo_primary.svg' className='h-10' alt='logo' />
-          </a>
+          <img src='/assets/logos/logo_primary.svg' className='h-10' alt='logo' />
         </Link>
         <div className='flex gap-2'>
           {menuList.map((menu, index) => (
